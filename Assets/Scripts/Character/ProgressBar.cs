@@ -2,7 +2,7 @@
 
 namespace AnatomyJam.Character
 {
-    public class ProgressBar
+    public class ProgressBar : MonoBehaviour
     {
         [SerializeField]
         private RectTransform _bar;
