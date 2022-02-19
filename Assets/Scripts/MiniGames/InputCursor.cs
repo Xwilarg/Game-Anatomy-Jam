@@ -7,23 +7,24 @@ namespace Minigame
     {
         private RectTransform _rect;
 
-        private float _offset;
-
         [SerializeField]
-        private RectTransform _cursor;
+        private RectTransform _target;
 
         private void Start()
         {
             _rect = (RectTransform)transform;
         }
 
-        private void FixedUpdate()
+        public void Hit(InputAction.CallbackContext value)
         {
-        }
-        public void OnInventory(InputAction.CallbackContext value)
-        {
-            if (value.performed)
+            var targetXtLeft = _target.localPosition.x - (_target.sizeDelta.x / 2f);
+            var targetXtRight = _target.localPosition.x + (_target.sizeDelta.x / 2f);
+
+            if (value.performed
+            && _rect.localPosition.x >= targetXtLeft
+            && _rect.localPosition.x <= targetXtRight)
             {
+                Debug.Log("success");
             }
         }
     }
