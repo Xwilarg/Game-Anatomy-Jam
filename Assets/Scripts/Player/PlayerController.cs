@@ -1,3 +1,5 @@
+using AnatomyJam.SceneObjects;
+using AnatomyJam.SO;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -5,16 +7,17 @@ namespace AnatomyJam.Player
 {
     public class PlayerController : MonoBehaviour
     {
+        [SerializeField]
+        private Transform _handsContainer;
+
         private Rigidbody _rb;
         private Vector2 _mov;
 
         private Vector3 _initPos;
 
-        private AnatomyJam.SO.ResourceType? _chestType;
-        //TODO change to Gameobject?
-        private AnatomyJam.SO.ResourceType _heldType;
+        private Interactible _currentInteraction;
+        private SceneObject _inHands;
 
-        private GameObject _triggeredGO = null;
         private void Start()
         {
             _rb = GetComponent<Rigidbody>();
@@ -44,38 +47,34 @@ namespace AnatomyJam.Player
         {
             if (value.phase == InputActionPhase.Started)
             {
-                if (_chestType.HasValue)
+                if (_currentInteraction != null)
                 {
-                    _heldType = _chestType.Value;
-                }  
+                    _currentInteraction.Invoke();
+                }
             }
-            if (_triggeredGO != null)
-            {
-                //TODO if station: deposit, if object grab it (and maybe toss currently held object if any)
-            }
-            else
-            {
-                //TODO toss currently held item
-            }
+        }
+
+        public void AddObjectInHands(ObjectInfo obj)
+        {
+
         }
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.CompareTag("Chest"))
+            var otherC = other.GetComponent<Interactible>();
+            if (otherC != null)
             {
-                _chestType = other.gameObject.GetComponent<AnatomyJam.Chest.Chest>()?.Type;
-
+                _currentInteraction = otherC;
             }
-            _triggeredGO = other.gameObject;
         }
 
         private void OnTriggerExit(Collider other)
         {
-            if (other.gameObject.CompareTag("Chest"))
+            var otherC = other.GetComponent<Interactible>();
+            if (_currentInteraction == otherC)
             {
-                _chestType = null;
+                _currentInteraction = null;
             }
-            _triggeredGO = null;
         }
     }
 }

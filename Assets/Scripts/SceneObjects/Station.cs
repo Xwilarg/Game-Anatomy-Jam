@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace AnatomyJam.SceneObject.Station
+namespace AnatomyJam.SceneObjects
 {
     public class Station : MonoBehaviour
     {
