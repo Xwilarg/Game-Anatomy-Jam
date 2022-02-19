@@ -7,6 +7,9 @@ namespace AnatomyJam.Character
     public class UIDisplay : MonoBehaviour
     {
         [SerializeField]
+        private Image _background;
+
+        [SerializeField]
         private SO.CharacterInfo _info;
 
         [SerializeField]
@@ -21,7 +24,14 @@ namespace AnatomyJam.Character
         [SerializeField]
         private SpriteRenderer _sprite;
 
+        private Color _backgroundBaseColor;
+
         public SO.CharacterInfo Info => _info;
+
+        private void Start()
+        {
+            _background.color = _backgroundBaseColor;
+        }
 
         public void Toggle(bool value)
         {
@@ -34,6 +44,7 @@ namespace AnatomyJam.Character
         {
             _name.text = info.Name;
             _health.SetValue(1f);
+            _backgroundBaseColor = _background.color;
         }
 
         public void UpdateHealth(int value, int max)
@@ -42,6 +53,7 @@ namespace AnatomyJam.Character
             if (value == 0)
             {
                 _sprite.gameObject.SetActive(false);
+                _backgroundBaseColor = new Color(_backgroundBaseColor.r / 2f, _backgroundBaseColor.g / 2f, _backgroundBaseColor.b / 2f, _backgroundBaseColor.a);
             }
         }
     }
