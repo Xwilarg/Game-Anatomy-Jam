@@ -7,12 +7,19 @@ namespace Minigame
     {
         private RectTransform _rect;
 
+        private int Hits;
+
         [SerializeField]
         private RectTransform _target;
 
         private void Start()
         {
             _rect = (RectTransform)transform;
+        }
+
+        public int GetHits()
+        {
+            return Hits;
         }
 
         public void Hit(InputAction.CallbackContext value)
@@ -24,8 +31,9 @@ namespace Minigame
             && _rect.localPosition.x >= targetXtLeft
             && _rect.localPosition.x <= targetXtRight)
             {
-                Debug.Log("success");
+                Hits++;
             }
+            Debug.Log(Hits);
         }
     }
 }

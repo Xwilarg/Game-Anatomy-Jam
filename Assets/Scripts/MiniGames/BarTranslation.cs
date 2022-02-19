@@ -18,11 +18,6 @@ namespace Minigame
         [SerializeField]
         private AnimationCurve _curve;
 
-        public void ChangeSpeed()
-        {
-
-        }
-
         private void Start()
         {
             _rect = (RectTransform)transform;
