@@ -53,9 +53,9 @@ namespace AnatomyJam.Character
             }
         }
 
-        public void UpdateHealth(int value, int max)
+        public void UpdateHealth(float value)
         {
-            _health.SetValue(value / (float)max);
+            _health.SetValue(value);
             if (value == 0)
             {
                 _sprite.gameObject.SetActive(false);

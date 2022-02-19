@@ -42,7 +42,7 @@ namespace AnatomyJam.Character
                 value = Mathf.Clamp(value - _info.BaseArmor, 0, value);
             }
             _currentHealth = Mathf.Clamp(_currentHealth - value, 0, _maxHealth);
-            _display.UpdateHealth(value, _maxHealth);
+            _display.UpdateHealth((float)_currentHealth / _maxHealth);
         }
 
         /// <summary>
@@ -50,7 +50,8 @@ namespace AnatomyJam.Character
         /// </summary>
         public void Attack(CharacterBehavior target)
         {
-            target.TakeDamage(Mathf.RoundToInt(Random.Range(_info.BaseAttack.Min, _info.BaseAttack.Max)));
+            var damage = Mathf.RoundToInt(Random.Range(_info.BaseAttack.Min, _info.BaseAttack.Max));
+            target.TakeDamage(damage);
             ResetTimerAttack();
         }
 
