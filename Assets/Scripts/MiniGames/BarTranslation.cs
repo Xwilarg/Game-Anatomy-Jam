@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace Minigame
 {
@@ -35,14 +34,6 @@ namespace Minigame
                 _rect.localPosition.x + _offset,
                 _rect.localPosition.y
             );
-        }
-
-        public void OnAction(InputAction.CallbackContext value)
-        {
-            if (value.performed)
-            {
-                _rect.localPosition = new(0, 0);
-            }
         }
     }
 }
