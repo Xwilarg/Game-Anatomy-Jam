@@ -1,4 +1,7 @@
-﻿using System;
+﻿using AnatomyJam.Material;
+using AnatomyJam.SceneObjects.Station;
+using AnatomyJam.SO;
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -8,6 +11,12 @@ namespace AnatomyJam.SceneObjects
     {
         [SerializeField]
         private UnityEvent _onAction;
+
+        [SerializeField]
+        private AStation _associatedStation;
+
+        public bool IsValid(SceneObject obj)
+            => _associatedStation == null || (obj != null && _associatedStation.GetRecipe(obj));
 
         public void AddListener(Action callback)
         {

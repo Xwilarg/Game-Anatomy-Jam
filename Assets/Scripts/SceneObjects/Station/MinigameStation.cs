@@ -1,5 +1,4 @@
 ﻿using AnatomyJam.Player;
-using System.Linq;
 
 
 namespace AnatomyJam.SceneObjects.Station
@@ -8,7 +7,7 @@ namespace AnatomyJam.SceneObjects.Station
     {
         public override void Deposit(PlayerController pc, SceneObject obj)
         {
-            var result = _recipes.FirstOrDefault(x => x.Input.ResourceType == obj.Resource);
+            var result = GetRecipe(obj);
             if (result != null) // Craft failed
             {
                 pc.CanMove = false;

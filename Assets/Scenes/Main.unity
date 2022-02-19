@@ -1265,6 +1265,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _associatedStation: {fileID: 0}
 --- !u!1 &566210714
 GameObject:
   m_ObjectHideFlags: 0
@@ -2742,6 +2743,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _associatedStation: {fileID: 1168324131}
 --- !u!65 &1168324127
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3411,6 +3413,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _associatedStation: {fileID: 1292839946}
 --- !u!65 &1292839945
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3436,7 +3439,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78d01fe9edd4e194f87e71b64c06356b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _recipes: []
+  _recipes:
+  - {fileID: 11400000, guid: 46ace7e4ddea50b418eaeda978fc913b, type: 2}
   _output: {fileID: 25802970}
 --- !u!1 &1328245662
 GameObject:

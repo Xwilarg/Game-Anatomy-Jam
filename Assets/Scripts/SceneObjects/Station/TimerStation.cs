@@ -34,7 +34,7 @@ namespace AnatomyJam.SceneObjects.Station
                 if (_timer <= 0f)
                 {
                     _timer = 0f;
-                    var result = _recipes.FirstOrDefault(x => x.Input.ResourceType == _obj.Resource);
+                    var result = GetRecipe(_obj);
                     if (result != null) // Craft failed
                     {
                         ThrowOnFloor(_pc, _obj, result);

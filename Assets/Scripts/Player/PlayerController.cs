@@ -22,7 +22,7 @@ namespace AnatomyJam.Player
         private Interactible _currentInteraction;
         private SceneObject _inHands;
 
-        private bool _canMove;
+        private bool _canMove = true;
 
         public bool CanMove
         {
@@ -98,6 +98,8 @@ namespace AnatomyJam.Player
         {
             if (_inHands != null)
             {
+                ResetInteraction();
+
                 _inHands.DestroyObject();
                 station.Deposit(this, _inHands);
                 _inHands = null;
@@ -123,7 +125,7 @@ namespace AnatomyJam.Player
         private void OnTriggerEnter(Collider other)
         {
             var otherC = other.GetComponent<Interactible>();
-            if (otherC != null)
+            if (otherC != null && otherC.IsValid(_inHands))
             {
                 _currentInteraction = otherC;
                 _pressE.SetActive(true);

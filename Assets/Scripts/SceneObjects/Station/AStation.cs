@@ -1,5 +1,7 @@
+using AnatomyJam.Material;
 using AnatomyJam.Player;
 using AnatomyJam.SO;
+using System.Linq;
 using UnityEngine;
 
 
@@ -33,6 +35,11 @@ namespace AnatomyJam.SceneObjects.Station
                 instance.Name = result.Output.Name;
                 pc.AddObjectInHands(instance);
             });
+        }
+
+        public RecipeInfo GetRecipe(SceneObject obj)
+        {
+            return _recipes.FirstOrDefault(x => x.Input.ResourceType == obj.Resource && x.Input.Metal == obj.Metal && x.Input.Gem == obj.Gem);
         }
     }
 }
