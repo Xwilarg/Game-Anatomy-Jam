@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace AnatomyJam.SceneObjects
@@ -7,6 +8,11 @@ namespace AnatomyJam.SceneObjects
     {
         [SerializeField]
         private UnityEvent _onAction;
+
+        public void AddListener(Action callback)
+        {
+            _onAction.AddListener(new(callback));
+        }
 
         public void Invoke()
         {

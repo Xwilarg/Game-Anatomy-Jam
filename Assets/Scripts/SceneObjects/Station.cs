@@ -1,3 +1,4 @@
+using AnatomyJam.Player;
 using AnatomyJam.SO;
 using System.Collections;
 using System.Linq;
@@ -14,12 +15,12 @@ namespace AnatomyJam.SceneObjects
         [SerializeField]
         private Transform _output;
 
-        public void Deposit(SceneObject obj)
+        public void Deposit(PlayerController pc, SceneObject obj)
         {
-            StartCoroutine(Build(obj));
+            StartCoroutine(Build(pc, obj));
         }
 
-        public IEnumerator Build(SceneObject obj)
+        public IEnumerator Build(PlayerController pc, SceneObject obj)
         {
             yield return new WaitForSeconds(3f);
 
@@ -29,7 +30,8 @@ namespace AnatomyJam.SceneObjects
                 obj.Resource = result.Output.ResourceType;
                 obj.GameObject = Instantiate(result.Output.GameObject, _output.position, Random.rotation);
                 var opDir = (_output.position - transform.position).normalized;
-                obj.GameObject.GetComponent<Rigidbody>().AddForce(opDir * 30f, ForceMode.Impulse);
+                obj.GameObject.GetComponent<Rigidbody>().AddForce((opDir + Vector3.up).normalized, ForceMode.Impulse);
+                obj.GameObject.GetComponent<Interactible>().AddListener(() => { pc.AddObjectInHands(obj); });
             }
         }
     }

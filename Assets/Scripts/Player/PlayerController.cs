@@ -45,6 +45,27 @@ namespace AnatomyJam.Player
             }
         }
 
+        // TODO: Somehow merge the 2 methods together
+
+        public void AddObjectInHands(SceneObject obj)
+        {
+            Destroy(obj.GameObject);
+            var go = Instantiate(obj.GameObject, _handsContainer);
+            go.transform.localPosition = Vector3.zero;
+
+            _inHands = obj;
+
+            foreach (var coll in go.GetComponents<Collider>())
+            {
+                coll.enabled = false;
+            }
+            var rb = go.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.isKinematic = true;
+            }
+        }
+
         public void AddObjectInHands(ObjectInfo obj)
         {
             var go = Instantiate(obj.GameObject, _handsContainer);
@@ -53,12 +74,11 @@ namespace AnatomyJam.Player
             _inHands = go.GetComponent<SceneObject>();
             _inHands.Init(obj, go);
 
-            var coll = go.GetComponent<Collider>();
-            var rb = go.GetComponent<Rigidbody>();
-            if (coll != null)
+            foreach (var coll in go.GetComponents<Collider>())
             {
                 coll.enabled = false;
             }
+            var rb = go.GetComponent<Rigidbody>();
             if (rb != null)
             {
                 rb.isKinematic = true;
@@ -70,7 +90,7 @@ namespace AnatomyJam.Player
             if (_inHands != null)
             {
                 _inHands.DestroyObject();
-                station.Deposit(_inHands);
+                station.Deposit(this, _inHands);
                 _inHands = null;
             }
         }
