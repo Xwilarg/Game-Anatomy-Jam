@@ -1,4 +1,6 @@
-using System.Collections.Generic;
+using AnatomyJam.SO;
+using System.Collections;
+using System.Linq;
 using UnityEngine;
 
 
@@ -7,24 +9,22 @@ namespace AnatomyJam.SceneObjects
     public class Station : MonoBehaviour
     {
         [SerializeField]
-        private SO.ResourceType[] _allowedRessources;
-        [SerializeField]
-        private int recipeLength = 1;
+        private RecipeInfo[] _recipes;
 
-        //TODO change to Gameobject?
-        private List<SO.ResourceType> _storedRessources;
 
-        //TODO, probably subclass for the hero equipment chests
-
-        public void Deposit(SO.ResourceType type)
+        public void Deposit(ObjectInfo obj)
         {
-            _storedRessources.Add(type);
+            StartCoroutine(Build(obj.ResourceType));
+        }
 
-            if (_storedRessources.Count == recipeLength)
+        public IEnumerator Build(ResourceType res)
+        {
+            yield return new WaitForSeconds(3f);
+
+            var result = _recipes.FirstOrDefault(x => x.Input == res);
+            if (result != null) // Craft failed
             {
-                //check recipe and run minigame
-
-                _storedRessources.Clear();
+                // TODO: Recrache result.Output
             }
         }
     }

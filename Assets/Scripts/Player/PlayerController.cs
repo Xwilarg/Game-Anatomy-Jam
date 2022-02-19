@@ -59,6 +59,17 @@ namespace AnatomyJam.Player
             }
         }
 
+        public void AddObjectToStation(Station station)
+        {
+            if (_inHands != null)
+            {
+                station.Deposit(_inHands.Info);
+                Destroy(_inHands.GameObject);
+                _inHands.GameObject = null;
+                _inHands = null;
+            }
+        }
+
         public void OnMovement(InputAction.CallbackContext value)
         {
             _mov = value.ReadValue<Vector2>().normalized;

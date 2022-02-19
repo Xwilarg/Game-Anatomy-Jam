@@ -5,11 +5,13 @@ namespace AnatomyJam.SceneObjects
 {
     public class SceneObject : MonoBehaviour
     {
-        private ObjectInfo _info;
+        public ObjectInfo Info { private set; get; }
+        public GameObject GameObject { set; get; }
 
-        public void Init(ObjectInfo info)
+        public void Init(ObjectInfo info, GameObject gameObject)
         {
-            _info = info;
+            Info = info;
+            GameObject = gameObject;
         }
     }
 }
