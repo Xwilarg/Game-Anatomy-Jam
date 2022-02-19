@@ -1,5 +1,4 @@
-﻿using AnatomyJam.Character;
-using AnatomyJam.Player;
+﻿using AnatomyJam.Player;
 using System.Linq;
 
 
