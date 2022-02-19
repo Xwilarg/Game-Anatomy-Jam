@@ -18,5 +18,6 @@ public class Sewing : MonoBehaviour
     private void Update()
     {
         _ball.transform.Translate(new Vector3(0f, -fallingSpeed * Time.deltaTime, 0f));
+
     }
 }
