@@ -14,7 +14,7 @@ public class QuenchingManager : MonoBehaviour
     private TMP_Text _text;
 
 
-    private float _negative_rate = 0.30f;
+    private float _negative_rate = 0.3f;
 
     private float _positive_rate = 0.05f;
 
