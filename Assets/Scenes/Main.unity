@@ -123,6 +123,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &25802969
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 25802970}
+  m_Layer: 0
+  m_Name: Output
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &25802970
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25802969}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.0696, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1292839940}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &50123757
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,7 +842,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 425175857}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.84, y: 2.81, z: 0.59}
+  m_LocalPosition: {x: 2.84, y: 2.81, z: 0.114}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2542,7 +2573,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.38268402, y: -0, z: -0, w: 0.9238793}
-  m_LocalPosition: {x: 2.84, y: 3.6299999, z: -0.110000014}
+  m_LocalPosition: {x: 2.84, y: 3.6299999, z: -0.58599997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2703,8 +2734,9 @@ MonoBehaviour:
         m_MethodName: AddObjectToStation
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: AnatomyJam.SceneObjects.Station, Assembly-CSharp
+          m_ObjectArgument: {fileID: 1168324131}
+          m_ObjectArgumentAssemblyTypeName: AnatomyJam.SceneObjects.Station.AStation,
+            Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3266,6 +3298,146 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5426279526464898114, guid: 280a899ed7b47da4a840472b0ee13367, type: 3}
   m_PrefabInstance: {fileID: 1280460569}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1292839939
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1526725958}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f0135a8199dc7e244ae4955ae761ce9c, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f0135a8199dc7e244ae4955ae761ce9c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.899
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f0135a8199dc7e244ae4955ae761ce9c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.6929
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f0135a8199dc7e244ae4955ae761ce9c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.782
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f0135a8199dc7e244ae4955ae761ce9c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071079
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f0135a8199dc7e244ae4955ae761ce9c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f0135a8199dc7e244ae4955ae761ce9c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.70710576
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f0135a8199dc7e244ae4955ae761ce9c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f0135a8199dc7e244ae4955ae761ce9c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f0135a8199dc7e244ae4955ae761ce9c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f0135a8199dc7e244ae4955ae761ce9c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f0135a8199dc7e244ae4955ae761ce9c, type: 3}
+      propertyPath: m_Name
+      value: anvil
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f0135a8199dc7e244ae4955ae761ce9c, type: 3}
+--- !u!4 &1292839940 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f0135a8199dc7e244ae4955ae761ce9c, type: 3}
+  m_PrefabInstance: {fileID: 1292839939}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1292839941 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2310409205138740886, guid: f0135a8199dc7e244ae4955ae761ce9c, type: 3}
+  m_PrefabInstance: {fileID: 1292839939}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1292839942
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292839941}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.06700002, y: 0.038000003, z: 0.12800004}
+  m_Center: {x: 0, y: 0.0198, z: 0}
+--- !u!1 &1292839943 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f0135a8199dc7e244ae4955ae761ce9c, type: 3}
+  m_PrefabInstance: {fileID: 1292839939}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1292839944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292839943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5361ade70e056e746ad484d0b77c9095, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onAction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 425175864}
+        m_TargetAssemblyTypeName: AnatomyJam.Player.PlayerController, Assembly-CSharp
+        m_MethodName: AddObjectToStation
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1292839946}
+          m_ObjectArgumentAssemblyTypeName: AnatomyJam.SceneObjects.Station.AStation,
+            Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!65 &1292839945
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292839943}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.14149179, y: 0.11928214, z: 0.20257299}
+  m_Center: {x: -0.0038669035, y: 0.06044107, z: -0.0008395612}
+--- !u!114 &1292839946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292839943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d01fe9edd4e194f87e71b64c06356b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _recipes: []
+  _output: {fileID: 25802970}
 --- !u!1 &1328245662
 GameObject:
   m_ObjectHideFlags: 0
@@ -3571,6 +3743,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1168324125}
+  - {fileID: 1292839940}
   m_Father: {fileID: 92896518}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
