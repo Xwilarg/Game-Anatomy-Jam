@@ -59,7 +59,10 @@ namespace AnatomyJam.Character
             if (value == 0)
             {
                 _sprite.gameObject.SetActive(false);
-                _backgroundBaseColor = new Color(_backgroundBaseColor.r / 2f, _backgroundBaseColor.g / 2f, _backgroundBaseColor.b / 2f, _backgroundBaseColor.a);
+                if (_background != null)
+                {
+                    _background.color = new Color(_backgroundBaseColor.r / 2f, _backgroundBaseColor.g / 2f, _backgroundBaseColor.b / 2f, _backgroundBaseColor.a);
+                }
             }
         }
     }
