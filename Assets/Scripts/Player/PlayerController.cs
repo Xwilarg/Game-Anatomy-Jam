@@ -48,11 +48,17 @@ namespace AnatomyJam.Player
 
         // TODO: Somehow merge the 2 methods together
 
+        /// <summary>
+        /// Object taken from the floor
+        /// </summary>
         public void AddObjectInHands(SceneObject obj)
         {
+            _currentInteraction = null;
+
             Destroy(obj.GameObject);
             var go = Instantiate(obj.GameObject, _handsContainer);
             go.transform.localPosition = Vector3.zero;
+            obj.GameObject = go;
 
             _inHands = obj;
 
@@ -67,6 +73,9 @@ namespace AnatomyJam.Player
             }
         }
 
+        /// <summary>
+        /// Object taken from chest
+        /// </summary>
         public void AddObjectInHands(ObjectInfo obj)
         {
             var go = Instantiate(obj.GameObject, _handsContainer);
