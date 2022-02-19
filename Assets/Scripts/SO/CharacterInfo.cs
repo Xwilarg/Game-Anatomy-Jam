@@ -17,10 +17,10 @@ namespace AnatomyJam.SO
         [Tooltip("Natural armor of the character, damage are substracted by it")]
         public int BaseArmor;
         [Tooltip("Base damage")]
-        public Range BaseAttack;
+        public Range<int> BaseAttack;
 
         [Tooltip("Time between 2 attacks in seconds")]
-        public Range AttackSpeed;
+        public Range<float> AttackSpeed;
 
         [Tooltip("Class of the character")]
         public CharacterClass Class;

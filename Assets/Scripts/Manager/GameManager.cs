@@ -3,7 +3,7 @@ using AnatomyJam.Map;
 using System.Collections;
 using UnityEngine;
 
-namespace AnatomyJam
+namespace AnatomyJam.Manager
 {
     public class GameManager : MonoBehaviour
     {
@@ -20,11 +20,13 @@ namespace AnatomyJam
         private SO.CharacterInfo[] _enemies;
 
         private CharacterBehavior _currentEnemy;
+        private ProgressManager _progress;
 
         private bool _isFighting;
 
         private void Start()
         {
+            _progress = GetComponent<ProgressManager>();
             StartCoroutine(BeginRun());
         }
 
@@ -41,7 +43,7 @@ namespace AnatomyJam
             _displayEnemy.Toggle(true);
 
             // Movement done, we set the current enemy
-            _currentEnemy = new(_displayEnemy, _enemies[Random.Range(0, _enemies.Length)]);
+            _currentEnemy = new(_displayEnemy, _progress.GetCurrentEnnemy());
 
             // Reset state for everyone
             _party.ReadyForFight();
@@ -73,6 +75,7 @@ namespace AnatomyJam
                 else
                 {
                     // Enemy was killed, let's fight the next one
+                    _progress.WinFight();
                     StartCoroutine(BeginRun());
                 }
             }

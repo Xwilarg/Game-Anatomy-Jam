@@ -2,11 +2,12 @@
 {
     public enum ResourceType
     {
+        Charcoal,
         Wood,
         Iron,
 
         Diamond,
-        Emeralde,
+        Emerald,
         Ruby,
         Sapphir,
 

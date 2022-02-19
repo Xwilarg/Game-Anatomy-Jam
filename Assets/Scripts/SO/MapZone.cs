@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using AnatomyJam.Util;
+using UnityEngine;
 
 namespace AnatomyJam.SO
 {
@@ -9,16 +10,19 @@ namespace AnatomyJam.SO
     [CreateAssetMenu(menuName = "ScriptableObject/MapZone", fileName = "MapZone")]
     public class MapZone : ScriptableObject
     {
-        [Tooltip("Size of the pixel of a tile")]
-        public float PixelSize;
+        [Tooltip("Name of the zone")]
+        public string Name;
 
-        [Tooltip("Number of line a group of tile contain")]
-        public int NbOfLines;
+        [Tooltip("Enemies the party can encounter in this zone")]
+        public CharacterInfo[] Encounters;
 
-        [Tooltip("Scrolling speed")]
-        public float ScrollingSpeed;
+        [Tooltip("The boss the player will encounter between switching to new zone")]
+        public CharacterInfo Boss;
 
-        [Tooltip("Y value before object is moved on top")]
-        public float MinBeforeReset;
+        [Tooltip("Resources unlocked once the zone is completed")]
+        public ResourceType[] UnlockedResources;
+
+        [Tooltip("Number of enemies before the party reach the boss")]
+        public Range<int> NbOfEnemiesBeforeBoss;
     }
 }
