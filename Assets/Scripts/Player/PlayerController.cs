@@ -10,6 +10,10 @@ namespace AnatomyJam.Player
 
         private Vector3 _initPos;
 
+        private AnatomyJam.SO.ResourceType? _chestType;
+        private AnatomyJam.SO.ResourceType _heldType;
+
+        private GameObject _triggeredGO = null;
         private void Start()
         {
             _rb = GetComponent<Rigidbody>();
@@ -33,6 +37,40 @@ namespace AnatomyJam.Player
         public void OnMovement(InputAction.CallbackContext value)
         {
             _mov = value.ReadValue<Vector2>().normalized;
+        }
+
+        public void OnInterract(InputAction.CallbackContext value)
+        {
+            if (value.phase == InputActionPhase.Started)
+            {
+                if (_chestType.HasValue)
+                {
+                    _heldType = _chestType.Value;
+                }  
+            }
+            if (_triggeredGO != null)
+            {
+
+            }
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.gameObject.CompareTag("Chest"))
+            {
+                _chestType = other.gameObject.GetComponent<AnatomyJam.Chest.Chest>()?.Type;
+
+            }
+            _triggeredGO = other.gameObject;
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            if (other.gameObject.CompareTag("Chest"))
+            {
+                _chestType = null;
+            }
+            _triggeredGO = null;
         }
     }
 }
