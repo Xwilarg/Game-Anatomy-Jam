@@ -10,6 +10,9 @@ namespace AnatomyJam.Player
         [SerializeField]
         private Transform _handsContainer;
 
+        [SerializeField]
+        private GameObject _pressE;
+
         private Rigidbody _rb;
         private Vector2 _mov;
 
@@ -94,6 +97,7 @@ namespace AnatomyJam.Player
             if (otherC != null)
             {
                 _currentInteraction = otherC;
+                _pressE.SetActive(true);
             }
         }
 
@@ -103,6 +107,7 @@ namespace AnatomyJam.Player
             if (_currentInteraction == otherC)
             {
                 _currentInteraction = null;
+                _pressE.SetActive(false);
             }
         }
     }
