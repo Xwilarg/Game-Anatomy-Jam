@@ -895,7 +895,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &425175863
 MonoBehaviour:
@@ -943,7 +943,19 @@ MonoBehaviour:
     m_ActionId: 6bdb8d46-2f60-459e-9560-fdf73c3f3dbe
     m_ActionName: Player/Look[/Mouse/delta]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 425175864}
+        m_TargetAssemblyTypeName: AnatomyJam.Player.PlayerController, Assembly-CSharp
+        m_MethodName: OnInterract
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: c7bf3f58-e1b4-49f0-ba1d-aa5ec7235a01
     m_ActionName: Player/Fire[/Mouse/leftButton]
   - m_PersistentCalls:
@@ -1003,6 +1015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d752f4b4a8ac42743b38b46e858b14aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _handsContainer: {fileID: 1767215747}
 --- !u!1 &513923119
 GameObject:
   m_ObjectHideFlags: 0

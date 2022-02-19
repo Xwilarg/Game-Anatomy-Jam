@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
 namespace AnatomyJam.SceneObjects
@@ -19,9 +18,20 @@ namespace AnatomyJam.SceneObjects
         private int _myId = _id++;
 
         public static bool operator ==(Interactible a, Interactible b)
-            => a.Equals(b);
+        {
+            if (a is null)
+            {
+                return b is null;
+            }
+            if (b is null)
+            {
+                return false;
+            }
+            return a._myId == b._myId;
+        }
+
         public static bool operator !=(Interactible a, Interactible b)
-            => !a.Equals(b);
+            => !(a == b);
 
         public override bool Equals(object obj)
         {

@@ -38,6 +38,23 @@ namespace AnatomyJam.Player
             }
         }
 
+        public void AddObjectInHands(ObjectInfo obj)
+        {
+            var go = Instantiate(obj.GameObject, _handsContainer);
+            go.transform.localPosition = Vector3.zero;
+            _inHands = go.GetComponent<SceneObject>();
+            var coll = go.GetComponent<Collider>();
+            var rb = go.GetComponent<Rigidbody>();
+            if (coll != null)
+            {
+                coll.enabled = false;
+            }
+            if (rb != null)
+            {
+                rb.isKinematic = false;
+            }
+        }
+
         public void OnMovement(InputAction.CallbackContext value)
         {
             _mov = value.ReadValue<Vector2>().normalized;
@@ -52,11 +69,6 @@ namespace AnatomyJam.Player
                     _currentInteraction.Invoke();
                 }
             }
-        }
-
-        public void AddObjectInHands(ObjectInfo obj)
-        {
-
         }
 
         private void OnTriggerEnter(Collider other)
