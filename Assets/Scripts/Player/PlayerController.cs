@@ -1,4 +1,5 @@
 using AnatomyJam.SceneObjects;
+using AnatomyJam.SceneObjects.Station;
 using AnatomyJam.SO;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -85,7 +86,7 @@ namespace AnatomyJam.Player
             }
         }
 
-        public void AddObjectToStation(Station station)
+        public void AddObjectToStation(AStation station)
         {
             if (_inHands != null)
             {
