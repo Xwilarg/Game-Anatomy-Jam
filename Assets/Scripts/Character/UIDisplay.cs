@@ -7,6 +7,9 @@ namespace AnatomyJam.Character
     public class UIDisplay : MonoBehaviour
     {
         [SerializeField]
+        private SO.CharacterInfo _info;
+
+        [SerializeField]
         private ProgressBar _health, _mana;
 
         [SerializeField]
@@ -16,19 +19,20 @@ namespace AnatomyJam.Character
         private Image _image;
 
         [SerializeField]
-        private SO.CharacterInfo _info;
+        private SpriteRenderer _sprite;
 
-        private int _maxHealth, _maxMana;
-        private int _currentHealth, _currentMana;
+        public SO.CharacterInfo Info => _info;
 
-        private void Start()
+        public void Toggle(bool value)
         {
-            _maxHealth = _info.BaseHealth;
-            _maxMana = _info.BaseMana;
-            _currentHealth = _maxHealth;
-            _currentMana = _maxMana;
+            _name.gameObject.SetActive(value);
+            _health.gameObject.SetActive(value);
+            _sprite.gameObject.SetActive(value);
+        }
 
-            _name.text = _info.Name;
+        public void Init(SO.CharacterInfo info)
+        {
+            _name.text = info.Name;
         }
     }
 }

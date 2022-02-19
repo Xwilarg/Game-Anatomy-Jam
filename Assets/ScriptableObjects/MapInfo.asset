@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PixelSize: 0.32
   NbOfLines: 7
-  ScrollingSpeed: 0.01
+  ScrollingSpeed: 0.05
   MinBeforeReset: -3

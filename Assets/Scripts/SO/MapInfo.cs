@@ -5,22 +5,16 @@ namespace AnatomyJam.SO
     [CreateAssetMenu(menuName = "ScriptableObject/MapInfo", fileName = "MapInfo")]
     public class MapInfo : ScriptableObject
     {
-        /// <summary>
-        /// Size of the pixel of a tile
-        /// </summary>
+        [Tooltip("Size of the pixel of a tile")]
         public float PixelSize;
-        /// <summary>
-        /// Number of line a group of tile contain
-        /// </summary>
+
+        [Tooltip("Number of line a group of tile contain")]
         public int NbOfLines;
-        /// <summary>
-        /// Scrolling speed
-        /// </summary>
+
+        [Tooltip("Scrolling speed")]
         public float ScrollingSpeed;
 
-        /// <summary>
-        /// Y value before object is moved on top
-        /// </summary>
+        [Tooltip("Y value before object is moved on top")]
         public float MinBeforeReset;
     }
 }

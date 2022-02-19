@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 
 namespace AnatomyJam.Character
 {
@@ -6,5 +7,12 @@ namespace AnatomyJam.Character
     {
         [SerializeField]
         public UIDisplay[] _displays;
+
+        private CharacterBehavior[] _team;
+
+        private void Start()
+        {
+            _team = _displays.Select(x => new CharacterBehavior(x, x.Info)).ToArray();
+        }
     }
 }

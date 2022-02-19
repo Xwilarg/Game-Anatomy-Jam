@@ -11,7 +11,7 @@ namespace AnatomyJam.Map
         [SerializeField]
         private MapInfo _mapInfo;
 
-        public bool IsScrolling { private get; set; } = true;
+        public bool IsScrolling { private get; set; } = false;
 
         private void FixedUpdate()
         {
