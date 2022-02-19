@@ -40,8 +40,19 @@ namespace AnatomyJam.SceneObjects.Station
                         _obj.Resource = result.Output.ResourceType;
                         _obj.GameObject = Instantiate(result.Output.GameObject, _output.position, Random.rotation);
                         var opDir = (_output.position - transform.position).normalized;
-                        _obj.GameObject.GetComponent<Rigidbody>().AddForce((opDir + Vector3.up).normalized, ForceMode.Impulse);
-                        _obj.GameObject.GetComponent<Interactible>().AddListener(() => { _pc.AddObjectInHands(_obj); });
+                        _obj.GameObject.GetComponent<Rigidbody>().AddForce((opDir + Vector3.up).normalized * 2f, ForceMode.Impulse);
+                        _obj.GameObject.GetComponent<Interactible>().AddListener(() =>
+                        {
+                            Destroy(_obj.GameObject);
+                            _pc.ResetInteraction();
+                            var instance = ScriptableObject.CreateInstance<SO.ObjectInfo>();
+                            instance.GameObject = result.Output.GameObject;
+                            instance.Gem = _obj.Gem;
+                            instance.Metal = _obj.Metal;
+                            instance.ResourceType = _obj.Resource;
+                            instance.Name = result.Output.Name;
+                            _pc.AddObjectInHands(instance);
+                        });
                     }
                     _progress.gameObject.SetActive(false);
                 }

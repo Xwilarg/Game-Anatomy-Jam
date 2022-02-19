@@ -46,31 +46,10 @@ namespace AnatomyJam.Player
             }
         }
 
-        // TODO: Somehow merge the 2 methods together
-
-        /// <summary>
-        /// Object taken from the floor
-        /// </summary>
-        public void AddObjectInHands(SceneObject obj)
+        public void ResetInteraction()
         {
             _currentInteraction = null;
-
-            Destroy(obj.GameObject);
-            var go = Instantiate(obj.GameObject, _handsContainer);
-            go.transform.localPosition = Vector3.zero;
-            obj.GameObject = go;
-
-            _inHands = obj;
-
-            foreach (var coll in go.GetComponents<Collider>())
-            {
-                coll.enabled = false;
-            }
-            var rb = go.GetComponent<Rigidbody>();
-            if (rb != null)
-            {
-                rb.isKinematic = true;
-            }
+            _pressE.SetActive(false);
         }
 
         /// <summary>

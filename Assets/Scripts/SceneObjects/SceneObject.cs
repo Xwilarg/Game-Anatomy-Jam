@@ -8,14 +8,14 @@ namespace AnatomyJam.SceneObjects
     {
         public GameObject GameObject { set; get; }
         public ResourceType Resource { set; get; }
-        private Gem _gem;
-        private Metal _metal;
+        public Gem Gem { private set; get; }
+        public Metal Metal { private set; get; }
 
         public void Init(ObjectInfo info, GameObject gameObject)
         {
             Resource = info.ResourceType;
-            _gem = info.Gem;
-            _metal = info.Metal;
+            Gem = info.Gem;
+            Metal = info.Metal;
             GameObject = gameObject;
         }
 
