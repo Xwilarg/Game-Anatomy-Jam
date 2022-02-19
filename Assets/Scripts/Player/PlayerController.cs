@@ -22,6 +22,21 @@ namespace AnatomyJam.Player
         private Interactible _currentInteraction;
         private SceneObject _inHands;
 
+        private bool _canMove;
+
+        public bool CanMove
+        {
+            private get => _canMove;
+            set
+            {
+                if (!value)
+                {
+                    _rb.velocity = Vector3.zero;
+                }
+                _canMove = value;
+            }
+        }
+
         private void Start()
         {
             _rb = GetComponent<Rigidbody>();
@@ -30,6 +45,11 @@ namespace AnatomyJam.Player
 
         private void FixedUpdate()
         {
+            if (!_canMove)
+            {
+                return;
+            }
+
             _rb.velocity = new(_mov.x, _rb.velocity.y, _mov.y);
             if (_mov != Vector2.zero)
             {
