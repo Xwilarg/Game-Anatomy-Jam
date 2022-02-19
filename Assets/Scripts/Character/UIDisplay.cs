@@ -30,7 +30,10 @@ namespace AnatomyJam.Character
 
         private void Start()
         {
-            _background.color = _backgroundBaseColor;
+            if (_background != null)
+            {
+                _background.color = _backgroundBaseColor;
+            }
         }
 
         public void Toggle(bool value)
@@ -44,16 +47,22 @@ namespace AnatomyJam.Character
         {
             _name.text = info.Name;
             _health.SetValue(1f);
-            _backgroundBaseColor = _background.color;
+            if (_background != null)
+            {
+                _backgroundBaseColor = _background.color;
+            }
         }
 
-        public void UpdateHealth(int value, int max)
+        public void UpdateHealth(float value)
         {
-            _health.SetValue(value / (float)max);
+            _health.SetValue(value);
             if (value == 0)
             {
                 _sprite.gameObject.SetActive(false);
-                _backgroundBaseColor = new Color(_backgroundBaseColor.r / 2f, _backgroundBaseColor.g / 2f, _backgroundBaseColor.b / 2f, _backgroundBaseColor.a);
+                if (_background != null)
+                {
+                    _background.color = new Color(_backgroundBaseColor.r / 2f, _backgroundBaseColor.g / 2f, _backgroundBaseColor.b / 2f, _backgroundBaseColor.a);
+                }
             }
         }
     }

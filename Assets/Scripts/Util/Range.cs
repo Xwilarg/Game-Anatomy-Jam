@@ -3,9 +3,9 @@
 namespace AnatomyJam.Util
 {
     [Serializable]
-    public struct Range
+    public struct Range<T>
     {
-        public float Min;
-        public float Max;
+        public T Min;
+        public T Max;
     }
 }

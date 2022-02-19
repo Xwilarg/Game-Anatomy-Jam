@@ -169,6 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9cb0b473a7a0204fa3a4a0070f8fcda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _background: {fileID: 5337371915699281103}
   _info: {fileID: 11400000, guid: d87da3d23273c4749b50d778b1e32bf0, type: 2}
   _health: {fileID: 7178316882454900443}
   _mana: {fileID: 440796843763522392}
