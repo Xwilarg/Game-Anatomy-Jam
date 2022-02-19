@@ -35,10 +35,7 @@ namespace AnatomyJam.SceneObjects.Station
                 {
                     _timer = 0f;
                     var result = GetRecipe(_obj);
-                    if (result != null) // Craft failed
-                    {
-                        ThrowOnFloor(_pc, _obj, result);
-                    }
+                    ThrowOnFloor(_pc, _obj, result);
                     _progress.gameObject.SetActive(false);
                 }
                 else

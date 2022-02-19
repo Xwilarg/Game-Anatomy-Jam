@@ -19,6 +19,11 @@ namespace AnatomyJam.SceneObjects.Station
 
         protected void ThrowOnFloor(PlayerController pc, SceneObject obj, RecipeInfo result)
         {
+            if (result.Output.ResourceType == ResourceType.None) // This formula craft nothing
+            {
+                return;
+            }
+
             obj.Resource = result.Output.ResourceType;
             obj.GameObject = Instantiate(result.Output.GameObject, _output.position, Random.rotation);
             var opDir = (_output.position - transform.position).normalized;
