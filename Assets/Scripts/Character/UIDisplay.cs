@@ -24,6 +24,8 @@ namespace AnatomyJam.Character
         [SerializeField]
         private SpriteRenderer _sprite;
 
+        private Animator _anim;
+
         private Color _backgroundBaseColor;
 
         public SO.CharacterInfo Info => _info;
@@ -34,6 +36,7 @@ namespace AnatomyJam.Character
             {
                 _background.color = _backgroundBaseColor;
             }
+            _sprite.GetComponent<Animator>();
         }
 
         public void Toggle(bool value)
