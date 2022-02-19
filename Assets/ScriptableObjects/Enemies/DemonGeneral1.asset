@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b43b76678dfd94d41b66b2c318160733, type: 3}
-  m_Name: Tank
+  m_Name: DemonGeneral1
   m_EditorClassIdentifier: 
-  Name: Tank
-  BaseHealth: 150
-  BaseMana: 50
-  BaseArmor: 30
+  Name: Demon General 1
+  BaseHealth: 500
+  BaseMana: 500
+  BaseArmor: 50
   BaseAttack:
-    Min: 10
-    Max: 15
+    Min: 40
+    Max: 60
   AttackSpeed:
-    Min: 1.5
-    Max: 2
-  Class: 1
+    Min: 2
+    Max: 3
+  Class: 5
   TargetType: 1
