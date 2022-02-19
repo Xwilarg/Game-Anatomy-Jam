@@ -33,11 +33,16 @@ namespace AnatomyJam.Character
         public void Init(SO.CharacterInfo info)
         {
             _name.text = info.Name;
+            _health.SetValue(1f);
         }
 
         public void UpdateHealth(int value, int max)
         {
             _health.SetValue(value / (float)max);
+            if (value == 0)
+            {
+                _sprite.gameObject.SetActive(false);
+            }
         }
     }
 }

@@ -28,7 +28,7 @@ namespace AnatomyJam.Character
 
         public bool IsAlive => _currentHealth > 0;
         public bool CanAttack => _timeBeforeAttack <= 0f;
-        public TargetType TargetType => _info.Type;
+        public TargetType TargetType => _info.TargetType;
 
         /// <summary>
         /// Lower health given the damage given in parameter
@@ -39,7 +39,7 @@ namespace AnatomyJam.Character
             // Substract armor
             if (value > 0)
             {
-                value = Mathf.Clamp(_info.BaseArmor - value, 0, _info.BaseArmor);
+                value = Mathf.Clamp(value - _info.BaseArmor, 0, value);
             }
             _currentHealth = Mathf.Clamp(_currentHealth - value, 0, _maxHealth);
             _display.UpdateHealth(value, _maxHealth);
@@ -50,7 +50,7 @@ namespace AnatomyJam.Character
         /// </summary>
         public void Attack(CharacterBehavior target)
         {
-            target.TakeDamage(_info.BaseAttack);
+            target.TakeDamage(Mathf.RoundToInt(Random.Range(_info.BaseAttack.Min, _info.BaseAttack.Max)));
             ResetTimerAttack();
         }
 

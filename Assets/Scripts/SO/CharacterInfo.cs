@@ -17,7 +17,7 @@ namespace AnatomyJam.SO
         [Tooltip("Natural armor of the character, damage are substracted by it")]
         public int BaseArmor;
         [Tooltip("Base damage")]
-        public int BaseAttack;
+        public Range BaseAttack;
 
         [Tooltip("Time between 2 attacks in seconds")]
         public Range AttackSpeed;
@@ -25,6 +25,6 @@ namespace AnatomyJam.SO
         [Tooltip("Class of the character")]
         public CharacterClass Class;
         [Tooltip("Does character target its allie of enemy when attacking? (Healer \"attack\" their allie)")]
-        public TargetType Type;
+        public TargetType TargetType;
     }
 }
