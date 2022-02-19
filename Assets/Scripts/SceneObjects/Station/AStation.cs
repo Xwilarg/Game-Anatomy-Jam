@@ -14,6 +14,26 @@ namespace AnatomyJam.SceneObjects.Station
         protected Transform _output;
 
         public abstract void Deposit(PlayerController pc, SceneObject obj);
+
+        protected void ThrowOnFloor(PlayerController pc, SceneObject obj, RecipeInfo result)
+        {
+            obj.Resource = result.Output.ResourceType;
+            obj.GameObject = Instantiate(result.Output.GameObject, _output.position, Random.rotation);
+            var opDir = (_output.position - transform.position).normalized;
+            obj.GameObject.GetComponent<Rigidbody>().AddForce((opDir + Vector3.up).normalized * 2f, ForceMode.Impulse);
+            obj.GameObject.GetComponent<Interactible>().AddListener(() =>
+            {
+                Destroy(obj.GameObject);
+                pc.ResetInteraction();
+                var instance = ScriptableObject.CreateInstance<SO.ObjectInfo>();
+                instance.GameObject = result.Output.GameObject;
+                instance.Gem = obj.Gem;
+                instance.Metal = obj.Metal;
+                instance.ResourceType = obj.Resource;
+                instance.Name = result.Output.Name;
+                pc.AddObjectInHands(instance);
+            });
+        }
     }
 }
 
