@@ -2,6 +2,7 @@
 {
     public enum Metal
     {
+        None,
         Iron,
         Mithril,
         Adamantite,

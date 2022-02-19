@@ -63,9 +63,8 @@ namespace AnatomyJam.Player
         {
             if (_inHands != null)
             {
-                station.Deposit(_inHands.Info);
-                Destroy(_inHands.GameObject);
-                _inHands.GameObject = null;
+                _inHands.DestroyObject();
+                station.Deposit(_inHands);
                 _inHands = null;
             }
         }

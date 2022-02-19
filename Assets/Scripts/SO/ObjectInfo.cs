@@ -13,5 +13,8 @@ namespace AnatomyJam.SO
 
         [Tooltip("Resource associated with the object")]
         public ResourceType ResourceType;
+
+        public Gem Gem;
+        public Metal Metal;
     }
 }

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 68875bfcd35dac44199190b45459140a, type: 3}
-  m_Name: Iron
+  m_Name: RawMetal
   m_EditorClassIdentifier: 
-  Input: 16
-  Output: 24
+  Input: {fileID: 11400000, guid: 70f80fc487c6e5d498a799d6e2ba55e2, type: 2}
+  Output: {fileID: 11400000, guid: 55465553f9e360b48bfe373f9e67592c, type: 2}

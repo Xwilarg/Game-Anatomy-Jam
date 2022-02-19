@@ -1,4 +1,3 @@
-using AnatomyJam.Material;
 using AnatomyJam.SO;
 using System.Collections;
 using System.Linq;
@@ -12,20 +11,25 @@ namespace AnatomyJam.SceneObjects
         [SerializeField]
         private RecipeInfo[] _recipes;
 
+        [SerializeField]
+        private Transform _output;
 
-        public void Deposit(ObjectInfo obj)
+        public void Deposit(SceneObject obj)
         {
-            StartCoroutine(Build(obj.ResourceType));
+            StartCoroutine(Build(obj));
         }
 
-        public IEnumerator Build(ResourceType res)
+        public IEnumerator Build(SceneObject obj)
         {
             yield return new WaitForSeconds(3f);
 
-            var result = _recipes.FirstOrDefault(x => x.Input == res);
+            var result = _recipes.FirstOrDefault(x => x.Input.ResourceType == obj.Resource);
             if (result != null) // Craft failed
             {
-                // TODO: Recrache result.Output
+                obj.Resource = result.Output.ResourceType;
+                obj.GameObject = Instantiate(result.Output.GameObject, _output.position, Random.rotation);
+                var opDir = (_output.position - transform.position).normalized;
+                obj.GameObject.GetComponent<Rigidbody>().AddForce(opDir * 30f, ForceMode.Impulse);
             }
         }
     }

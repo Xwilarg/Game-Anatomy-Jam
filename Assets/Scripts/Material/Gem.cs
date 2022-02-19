@@ -2,6 +2,7 @@
 {
     public enum Gem
     {
+        None,
         Diamond,
         Emerald,
         Ruby,

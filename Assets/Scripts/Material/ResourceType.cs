@@ -5,7 +5,7 @@
         None,
 
         Wood,
-        Iron,
+        RawMetal,
 
         Sword,
         BrokenWood,

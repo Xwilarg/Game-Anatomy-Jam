@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50d6601bdebf96d4eb7597d7ce3a00d0, type: 3}
   m_Name: Iron
   m_EditorClassIdentifier: 
-  Name: Charcoal
+  Name: Iron
   GameObject: {fileID: 3251943502638431517, guid: 9945dcd1f98526e4991fa5b1a45fec05, type: 3}
   ResourceType: 2
+  Gem: 0
+  Metal: 1
