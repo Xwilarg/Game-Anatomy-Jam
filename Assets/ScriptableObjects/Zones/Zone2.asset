@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4266cb65fe00ce4295e1984061d380c, type: 3}
-  m_Name: Zone1
+  m_Name: Zone2
   m_EditorClassIdentifier: 
-  Name: Plains
+  Name: Desert
   Encounters:
-  - {fileID: 11400000, guid: dee5df0041722314ab60c5cc5f5cf8e0, type: 2}
-  - {fileID: 11400000, guid: 33cfffcec5d53e0429a9d4fde0d78ec5, type: 2}
-  Boss: {fileID: 11400000, guid: f5c4457a992c85947a2b5a8618c1d805, type: 2}
+  - {fileID: 11400000, guid: 3463bc08dcb85a14a9028bb5941791a0, type: 2}
+  - {fileID: 11400000, guid: 0bb8d906e9ea0974881d2e5d3130ade6, type: 2}
+  Boss: {fileID: 11400000, guid: 972518a2e6b1e254c853cab6d2d740f4, type: 2}
   UnlockedResources: 
   NbOfEnemiesBeforeBoss:
-    Min: 3
-    Max: 5
+    Min: 5
+    Max: 8

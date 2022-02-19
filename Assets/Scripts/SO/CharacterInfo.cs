@@ -26,5 +26,8 @@ namespace AnatomyJam.SO
         public CharacterClass Class;
         [Tooltip("Does character target its allie of enemy when attacking? (Healer \"attack\" their allie)")]
         public TargetType TargetType;
+
+        [Tooltip("For enemy only, sprite")]
+        public Sprite EnemySprite;
     }
 }

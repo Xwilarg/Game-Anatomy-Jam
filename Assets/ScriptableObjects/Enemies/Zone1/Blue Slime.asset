@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b43b76678dfd94d41b66b2c318160733, type: 3}
-  m_Name: Slime
+  m_Name: Blue Slime
   m_EditorClassIdentifier: 
-  Name: Slime
+  Name: Blue Slime
   BaseHealth: 40
   BaseMana: 0
   BaseArmor: 0
   BaseAttack:
     Min: 15
-    Max: 25
+    Max: 30
   AttackSpeed:
     Min: 2
     Max: 3
   Class: 5
   TargetType: 1
+  EnemySprite: {fileID: -481632818, guid: d399a6c8062a56a47bf591c00c294885, type: 3}
