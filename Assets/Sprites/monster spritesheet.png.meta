@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -66,7 +66,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -118,8 +118,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f5c7868bb2ae1e4c95c8f9553868edb
-      internalID: -946584662
+      spriteID: 7403bd58b96a16b4383a0ac09bc75c59
+      internalID: 807313694
       vertices: []
       indices: 
       edges: []
@@ -139,8 +139,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 412bdf134140c1441a55bc195fd9d409
-      internalID: 973164232
+      spriteID: 0b0ea600490be104cac4ee4599b4286d
+      internalID: 586843073
       vertices: []
       indices: 
       edges: []
@@ -160,8 +160,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6099da1f7d9602d4aaa50e567a14e537
-      internalID: 689159428
+      spriteID: c0c1e15b5b7d7ac468394e3c341a21d8
+      internalID: 585505076
       vertices: []
       indices: 
       edges: []
@@ -181,8 +181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25f5b4fbd80b9ca47b7f81708e9dab3c
-      internalID: -1579262668
+      spriteID: 0f062457262da054ba76841c0a724579
+      internalID: -1948791379
       vertices: []
       indices: 
       edges: []
@@ -202,8 +202,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23c1b5da5cd958047bdfd18a5e4c9729
-      internalID: 1434067777
+      spriteID: 12758fc23e120ed4dae1b0d120c1329b
+      internalID: 2123781021
       vertices: []
       indices: 
       edges: []
@@ -223,8 +223,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 155eac6ade5faa141b2415c3a489b2b2
-      internalID: 94101447
+      spriteID: 968b1e9af36764349b9b4a73ebd9eca3
+      internalID: 58908065
       vertices: []
       indices: 
       edges: []
@@ -244,8 +244,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 879b24627586cf04f9b8a5e1a2774d2b
-      internalID: -432826810
+      spriteID: 8524ba00fc935b24f849ff5f74b29091
+      internalID: -329280461
       vertices: []
       indices: 
       edges: []
@@ -265,8 +265,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2f9d9605b0e81a4f88703f6fca8a5c6
-      internalID: -1411074947
+      spriteID: 54c97c31d6d2a71439989bae13658d9b
+      internalID: -1872571246
       vertices: []
       indices: 
       edges: []
@@ -286,8 +286,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68fb44d6d336e324f9f79efcc298cb71
-      internalID: 1510393988
+      spriteID: 1356c099a220ce34880a85a062407cf0
+      internalID: -50150623
       vertices: []
       indices: 
       edges: []
@@ -307,8 +307,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e37f5e6fb2cf164786053ac1f4472fa
-      internalID: -448249921
+      spriteID: f782199c8c48d6d499fa4806fec11398
+      internalID: -1595982783
       vertices: []
       indices: 
       edges: []
@@ -316,7 +316,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 800de1bbaba9d6443b11db82e381cecc
+    spriteID: 94ace29fea930054b80e3f71eb4f6d24
     internalID: 0
     vertices: []
     indices: 
@@ -324,16 +324,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      monster spritesheet_4: 1434067777
-      monster spritesheet_0: -946584662
-      monster spritesheet_1: 973164232
-      monster spritesheet_2: 689159428
-      monster spritesheet_7: -1411074947
-      monster spritesheet_9: -448249921
-      monster spritesheet_5: 94101447
-      monster spritesheet_6: -432826810
-      monster spritesheet_8: 1510393988
-      monster spritesheet_3: -1579262668
+      monster spritesheet_4: 2123781021
+      monster spritesheet_0: 807313694
+      monster spritesheet_1: 586843073
+      monster spritesheet_2: 585505076
+      monster spritesheet_7: -1872571246
+      monster spritesheet_9: -1595982783
+      monster spritesheet_5: 58908065
+      monster spritesheet_6: -329280461
+      monster spritesheet_8: -50150623
+      monster spritesheet_3: -1948791379
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
