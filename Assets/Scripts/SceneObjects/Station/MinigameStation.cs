@@ -1,6 +1,5 @@
 ﻿using AnatomyJam.Player;
 
-
 namespace AnatomyJam.SceneObjects.Station
 {
     public class MinigameStation : AStation
