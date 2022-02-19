@@ -16,5 +16,11 @@ MonoBehaviour:
   BaseHealth: 120
   BaseMana: 100
   BaseArmor: 10
-  BaseAttack: 15
+  BaseAttack:
+    Min: 20
+    Max: 30
+  AttackSpeed:
+    Min: 1
+    Max: 1.5
   Class: 0
+  TargetType: 1

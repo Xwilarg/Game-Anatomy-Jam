@@ -13,8 +13,14 @@ MonoBehaviour:
   m_Name: Slime
   m_EditorClassIdentifier: 
   Name: Slime
-  BaseHealth: 20
+  BaseHealth: 40
   BaseMana: 0
   BaseArmor: 0
-  BaseAttack: 5
+  BaseAttack:
+    Min: 15
+    Max: 25
+  AttackSpeed:
+    Min: 2
+    Max: 3
   Class: 5
+  TargetType: 1
