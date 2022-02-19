@@ -37,9 +37,11 @@ namespace AnatomyJam.Manager
             // Update display and enable scrolling to make so that characters are moving
 
             _scroller.IsScrolling = true;
+            _party.SetRunningState(true);
             _displayEnemy.Toggle(false);
             yield return new WaitForSeconds(3f);
             _scroller.IsScrolling = false;
+            _party.SetRunningState(false);
             _displayEnemy.Toggle(true);
 
             // Movement done, we set the current enemy

@@ -27,7 +27,10 @@ namespace AnatomyJam.Player
         private void FixedUpdate()
         {
             _rb.velocity = new(_mov.x, _rb.velocity.y, _mov.y);
-            transform.rotation = Quaternion.LookRotation(new(_mov.x, 0f, _mov.y));
+            if (_mov != Vector2.zero)
+            {
+                transform.rotation = Quaternion.LookRotation(new(_mov.x, 0f, _mov.y));
+            }
         }
 
         private void OnCollisionEnter(Collision collision)

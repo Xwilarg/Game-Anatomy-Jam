@@ -30,13 +30,13 @@ namespace AnatomyJam.Character
 
         public SO.CharacterInfo Info => _info;
 
-        private void Start()
+        private void Awake()
         {
             if (_background != null)
             {
                 _background.color = _backgroundBaseColor;
             }
-            _sprite.GetComponent<Animator>();
+            _anim = _sprite.GetComponent<Animator>();
         }
 
         public void Toggle(bool value)
@@ -54,6 +54,11 @@ namespace AnatomyJam.Character
             {
                 _backgroundBaseColor = _background.color;
             }
+        }
+
+        public void SetAnimationState(string name, bool state)
+        {
+            _anim.SetBool(name, state);
         }
 
         public void UpdateHealth(float value)

@@ -30,6 +30,11 @@ namespace AnatomyJam.Character
         public bool CanAttack => _timeBeforeAttack <= 0f;
         public TargetType TargetType => _info.TargetType;
 
+        public void SetAnimationState(string name, bool state)
+        {
+            _display.SetAnimationState(name, state);
+        }
+
         /// <summary>
         /// Lower health given the damage given in parameter
         /// If damage is negative, will heal the character instead
