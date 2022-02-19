@@ -46,7 +46,10 @@ namespace AnatomyJam.Player
         {
             var go = Instantiate(obj.GameObject, _handsContainer);
             go.transform.localPosition = Vector3.zero;
+
             _inHands = go.GetComponent<SceneObject>();
+            _inHands.Init(obj, go);
+
             var coll = go.GetComponent<Collider>();
             var rb = go.GetComponent<Rigidbody>();
             if (coll != null)
@@ -55,7 +58,7 @@ namespace AnatomyJam.Player
             }
             if (rb != null)
             {
-                rb.isKinematic = false;
+                rb.isKinematic = true;
             }
         }
 
