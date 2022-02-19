@@ -12,10 +12,10 @@ namespace AnatomyJam.SceneObject.Station
         [SerializeField]
         private int recipeLength = 1;
 
-
+        //TODO change to Gameobject?
         private List<AnatomyJam.SO.ResourceType> _storedRessources;
 
-
+        //TODO, probably subclass for the hero equipment chests
 
         public void Deposit(AnatomyJam.SO.ResourceType type)
         {
@@ -23,7 +23,7 @@ namespace AnatomyJam.SceneObject.Station
 
             if (_storedRessources.Count == recipeLength)
             {
-                //do the thing
+                //check recipe and run minigame
 
                 _storedRessources.Clear();
             }

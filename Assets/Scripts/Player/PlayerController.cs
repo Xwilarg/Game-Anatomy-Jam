@@ -11,6 +11,7 @@ namespace AnatomyJam.Player
         private Vector3 _initPos;
 
         private AnatomyJam.SO.ResourceType? _chestType;
+        //TODO change to Gameobject?
         private AnatomyJam.SO.ResourceType _heldType;
 
         private GameObject _triggeredGO = null;
@@ -50,7 +51,11 @@ namespace AnatomyJam.Player
             }
             if (_triggeredGO != null)
             {
-
+                //TODO if station: deposit, if object grab it (and maybe toss currently held object if any)
+            }
+            else
+            {
+                //TODO toss currently held item
             }
         }
 
