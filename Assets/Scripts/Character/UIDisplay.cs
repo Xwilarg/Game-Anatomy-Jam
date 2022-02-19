@@ -34,5 +34,10 @@ namespace AnatomyJam.Character
         {
             _name.text = info.Name;
         }
+
+        public void UpdateHealth(int value, int max)
+        {
+            _health.SetValue(value / (float)max);
+        }
     }
 }

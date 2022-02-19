@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using AnatomyJam.Util;
+using UnityEngine;
 
 namespace AnatomyJam.SO
 {
@@ -14,9 +15,12 @@ namespace AnatomyJam.SO
         public int BaseMana;
 
         [Tooltip("Natural armor of the character, damage are substracted by it")]
-        public float BaseArmor;
+        public int BaseArmor;
         [Tooltip("Base damage")]
-        public float BaseAttack;
+        public int BaseAttack;
+
+        [Tooltip("Time between 2 attacks in seconds")]
+        public Range AttackSpeed;
 
         [Tooltip("Class of the character")]
         public CharacterClass Class;

@@ -17,4 +17,8 @@ MonoBehaviour:
   BaseMana: 0
   BaseArmor: 0
   BaseAttack: 5
+  AttackSpeed:
+    Min: 2
+    Max: 3
   Class: 5
+  Type: 1
