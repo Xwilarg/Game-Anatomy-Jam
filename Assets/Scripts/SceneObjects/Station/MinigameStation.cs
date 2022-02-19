@@ -10,7 +10,7 @@ namespace AnatomyJam.SceneObjects.Station
             pc.CanMove = false;
             // TODO: Launch minigame
             // TODO: Once minigame is complete, call:
-            // pc.CanMove = false;
+            // pc.CanMove = true;
             // ThrowOnFloor(pc, obj, result);
         }
     }
