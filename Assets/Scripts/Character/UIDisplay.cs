@@ -56,6 +56,11 @@ namespace AnatomyJam.Character
             }
         }
 
+        public void UpdateSprite(Sprite s)
+        {
+            _sprite.sprite = s;
+        }
+
         public void SetAnimationState(string name, bool state)
         {
             _anim.SetBool(name, state);

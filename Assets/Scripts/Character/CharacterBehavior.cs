@@ -24,6 +24,11 @@ namespace AnatomyJam.Character
             _currentHealth = _maxHealth;
             _currentMana = _maxMana;
             display.Init(info);
+
+            if (info.EnemySprite != null)
+            {
+                _display.UpdateSprite(info.EnemySprite);
+            }
         }
 
         public bool IsAlive => _currentHealth > 0;
