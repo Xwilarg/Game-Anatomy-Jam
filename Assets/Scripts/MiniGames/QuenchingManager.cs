@@ -36,6 +36,8 @@ namespace Minigame
 
         public void Hit(InputAction.CallbackContext value)
         {
+            if (!gameObject.activeSelf)
+                return;
             if (value.phase == InputActionPhase.Started)
             {
                 _currentVal += _positive_rate;
@@ -44,7 +46,7 @@ namespace Minigame
                 if (_currentVal >= 1)
                 {
                     _cb_result();
-                    Destroy(gameObject);
+                    gameObject.SetActive(false);
                 }
             }
 
@@ -53,6 +55,8 @@ namespace Minigame
         public override void RunMinigame(MinigameCallBack cb_result, int difficultyFactor)
         {
             _cb_result = cb_result;
+            _currentVal = 0;
+            base.RunMinigame(cb_result, difficultyFactor);
         }
     }
 }

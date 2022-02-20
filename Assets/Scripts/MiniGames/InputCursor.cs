@@ -27,8 +27,7 @@ namespace Minigame
 
         private void Start()
         {
-            _rect = (RectTransform)_movingRect.transform;
-            _target = (RectTransform)_targetRect.transform;
+
         }
 
         public int GetHits()
@@ -38,6 +37,9 @@ namespace Minigame
 
         public void Hit(InputAction.CallbackContext value)
         {
+            if (!gameObject.activeSelf)
+                return;
+
             if (value.phase == InputActionPhase.Started && !_penalty)
             {
                 var targetXtLeft = _target.localPosition.x - (_target.sizeDelta.x / 2f);
@@ -49,7 +51,7 @@ namespace Minigame
                     if (Hits >= _targetHit)
                     {
                         _cb_result();
-                        Destroy(gameObject);
+                        gameObject.SetActive(false);
                     }
                 }
                 else
@@ -79,9 +81,13 @@ namespace Minigame
             _penalty = false;
         }
 
-        public override void RunMinigame(MinigameCallBack cb_result, int difficulty_factor)
+        public override void RunMinigame(MinigameCallBack cb_result, int difficultyFactor)
         {
+            _rect = (RectTransform)_movingRect.transform;
+            _target = (RectTransform)_targetRect.transform;
             _cb_result = cb_result;
+            Hits = 0;
+            base.RunMinigame(cb_result, difficultyFactor);
         }
     }
 }
