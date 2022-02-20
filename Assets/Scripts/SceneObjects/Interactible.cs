@@ -23,6 +23,10 @@ namespace AnatomyJam.SceneObjects
             {
                 return false;
             }
+            if (!_associatedStation.IsValid(obj))
+            {
+                return false;
+            }
             if (_associatedStation is TimerStation timer)
             {
                 if (timer.IsTimerActive)

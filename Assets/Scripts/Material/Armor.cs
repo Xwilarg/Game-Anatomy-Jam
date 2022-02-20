@@ -7,6 +7,10 @@ namespace AnatomyJam.Material
         [SerializeField]
         private float _value;
 
-        public float Value => _value;
+        public float Value
+        {
+            set => _value = value;
+            get => _value;
+        }
     }
 }

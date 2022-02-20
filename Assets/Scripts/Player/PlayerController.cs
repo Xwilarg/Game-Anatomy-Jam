@@ -116,8 +116,8 @@ namespace AnatomyJam.Player
             {
                 ResetInteraction();
 
-                _inHands.DestroyObject();
                 station.Deposit(this, _inHands);
+                _inHands.DestroyObject();
                 _inHands = null;
             }
         }

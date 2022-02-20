@@ -2,6 +2,7 @@ using AnatomyJam.Material;
 using AnatomyJam.Player;
 using AnatomyJam.SO;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 
 
@@ -17,7 +18,9 @@ namespace AnatomyJam.SceneObjects.Station
 
         public abstract void Deposit(PlayerController pc, SceneObject obj);
 
-        protected void ThrowOnFloor(PlayerController pc, SceneObject obj, RecipeInfo result)
+        public virtual bool IsValid(SceneObject _) => true;
+
+        protected void ThrowOnFloor(PlayerController pc, SceneObject obj, RecipeInfo result, float newArmValue, StationPolishAction action)
         {
             if (result.Output.ResourceType == ResourceType.None) // This formula craft nothing
             {
@@ -26,13 +29,25 @@ namespace AnatomyJam.SceneObjects.Station
 
             obj.Resource = result.Output.ResourceType;
             obj.GameObject = Instantiate(result.Output.GameObject, _output.position, Random.rotation);
+            if (action != StationPolishAction.None)
+            {
+                obj.GameObject.GetComponent<Armor>().Value = newArmValue;
+                if (action == StationPolishAction.Sharpen)
+                {
+                    obj.GameObject.GetComponentInChildren<TMP_Text>().text += "+";
+                }
+                else
+                {
+                    obj.GameObject.GetComponentInChildren<TMP_Text>().text.Replace('1', '2');
+                }
+            }
             var opDir = (_output.position - transform.position).normalized;
             obj.GameObject.GetComponent<Rigidbody>().AddForce((opDir + Vector3.up).normalized * 10f, ForceMode.Impulse);
             obj.GameObject.GetComponent<Interactible>().AddListener(() =>
             {
                 Destroy(obj.GameObject);
                 pc.ResetInteraction();
-                var instance = ScriptableObject.CreateInstance<SO.ObjectInfo>();
+                var instance = ScriptableObject.CreateInstance<ObjectInfo>();
                 instance.GameObject = result.Output.GameObject;
                 instance.Gem = obj.Gem;
                 instance.Metal = obj.Metal;

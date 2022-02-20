@@ -2181,6 +2181,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8dd6895f204029d4fbd4fb80ae3b64d7, type: 2}
   _output: {fileID: 1743425061}
   minigame: {fileID: 160091431}
+  _polish: 1
   minigameBG: {fileID: 2047117744}
 --- !u!114 &550398341
 MonoBehaviour:
@@ -5624,6 +5625,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 46ace7e4ddea50b418eaeda978fc913b, type: 2}
   _output: {fileID: 25802970}
   minigame: {fileID: 1029505282}
+  _polish: 0
   minigameBG: {fileID: 2047117744}
 --- !u!1 &1328245662
 GameObject:
