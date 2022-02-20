@@ -16,8 +16,8 @@ namespace Minigame
         private TMP_Text _text;
 
 
-        private float _negative_rate = 0.3f;
-
+        private float _negative_rate_base = 0.1f;
+        private float _negative_rate = 0.1f;
         private float _positive_rate = 0.05f;
 
         private float _currentVal = 0f;
@@ -52,10 +52,11 @@ namespace Minigame
 
         }
 
-        public override void RunMinigame(MinigameCallBack cb_result, int difficultyFactor)
+        public override void RunMinigame(MinigameCallBack cb_result, float difficultyFactor)
         {
             _cb_result = cb_result;
             _currentVal = 0;
+            _negative_rate = _negative_rate_base * difficultyFactor;
             base.RunMinigame(cb_result, difficultyFactor);
         }
     }

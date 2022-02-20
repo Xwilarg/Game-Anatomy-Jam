@@ -81,7 +81,7 @@ namespace Minigame
             _penalty = false;
         }
 
-        public override void RunMinigame(MinigameCallBack cb_result, int difficultyFactor)
+        public override void RunMinigame(MinigameCallBack cb_result, float difficultyFactor)
         {
             _rect = (RectTransform)_movingRect.transform;
             _target = (RectTransform)_targetRect.transform;
