@@ -54,6 +54,10 @@ namespace AnatomyJam.Character
             {
                 _backgroundBaseColor = _background.color;
             }
+            if (_image != null)
+            {
+                _image.gameObject.SetActive(true);
+            }
         }
 
         public void UpdateSprite(Sprite s)
@@ -83,6 +87,10 @@ namespace AnatomyJam.Character
             if (value == 0)
             {
                 _sprite.gameObject.SetActive(false);
+                if (_image != null)
+                {
+                    _image.gameObject.SetActive(false);
+                }
                 if (_background != null)
                 {
                     _background.color = new Color(_backgroundBaseColor.r / 2f, _backgroundBaseColor.g / 2f, _backgroundBaseColor.b / 2f, _backgroundBaseColor.a);

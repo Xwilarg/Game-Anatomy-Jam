@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4366757, g: 0.48427194, b: 0.5645252, a: 1}
+  m_IndirectSpecularColor: {r: 0.4366756, g: 0.48427194, b: 0.5645252, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -840,6 +840,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 185530205}
     m_Modifications:
+    - target: {fileID: 5337371915639273836, guid: 22096801b4b4d0d45b8e646b19b1e7d2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bb30aea45415be643a592c9ecd10e1c4, type: 3}
     - target: {fileID: 5337371915699281101, guid: 22096801b4b4d0d45b8e646b19b1e7d2, type: 3}
       propertyPath: m_Name
       value: DisplayMage
@@ -3065,6 +3069,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 185530205}
     m_Modifications:
+    - target: {fileID: 5337371915639273836, guid: 22096801b4b4d0d45b8e646b19b1e7d2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 291e7eff05e1ac04a9307d8c9d05c688, type: 3}
     - target: {fileID: 5337371915699281101, guid: 22096801b4b4d0d45b8e646b19b1e7d2, type: 3}
       propertyPath: m_Name
       value: DisplayTank
@@ -6065,6 +6073,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 185530205}
     m_Modifications:
+    - target: {fileID: 5337371915639273836, guid: 22096801b4b4d0d45b8e646b19b1e7d2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 147c7d2a6b42233469e8d17301180194, type: 3}
     - target: {fileID: 5337371915699281101, guid: 22096801b4b4d0d45b8e646b19b1e7d2, type: 3}
       propertyPath: m_Name
       value: DisplayHeal
@@ -7096,6 +7108,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 185530205}
     m_Modifications:
+    - target: {fileID: 5337371915639273836, guid: 22096801b4b4d0d45b8e646b19b1e7d2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 089f7ba3953dae34e95d3e5ba1d7bf68, type: 3}
     - target: {fileID: 5337371915699281101, guid: 22096801b4b4d0d45b8e646b19b1e7d2, type: 3}
       propertyPath: m_Name
       value: DisplayHero
