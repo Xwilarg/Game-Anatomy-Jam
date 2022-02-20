@@ -1527,7 +1527,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3789b855f1b894cb85e6fb2d54e5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _recipes: []
+  _recipes:
+  - {fileID: 11400000, guid: 8e96de7ca516d984187a1109b8b8504d, type: 2}
   _output: {fileID: 0}
   _target: 1
 --- !u!1001 &386964514
@@ -4473,7 +4474,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3789b855f1b894cb85e6fb2d54e5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _recipes: []
+  _recipes:
+  - {fileID: 11400000, guid: 8e96de7ca516d984187a1109b8b8504d, type: 2}
   _output: {fileID: 0}
   _target: 2
 --- !u!114 &1029505282 stripped
@@ -5811,7 +5813,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3789b855f1b894cb85e6fb2d54e5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _recipes: []
+  _recipes:
+  - {fileID: 11400000, guid: 8e96de7ca516d984187a1109b8b8504d, type: 2}
   _output: {fileID: 0}
   _target: 3
 --- !u!1 &1385565067
@@ -8570,7 +8573,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3789b855f1b894cb85e6fb2d54e5a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _recipes: []
+  _recipes:
+  - {fileID: 11400000, guid: 8e96de7ca516d984187a1109b8b8504d, type: 2}
   _output: {fileID: 0}
   _target: 0
 --- !u!1001 &7568326915674067846
