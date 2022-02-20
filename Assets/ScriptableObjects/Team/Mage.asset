@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b43b76678dfd94d41b66b2c318160733, type: 3}
   m_Name: Mage
   m_EditorClassIdentifier: 
-  Name: Mage
+  Name: Archmage
   BaseHealth: 60
   BaseMana: 250
   BaseArmor: 5

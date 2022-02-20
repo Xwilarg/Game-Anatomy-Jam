@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b43b76678dfd94d41b66b2c318160733, type: 3}
   m_Name: Tank
   m_EditorClassIdentifier: 
-  Name: Tank
+  Name: Knight
   BaseHealth: 150
   BaseMana: 50
   BaseArmor: 25
