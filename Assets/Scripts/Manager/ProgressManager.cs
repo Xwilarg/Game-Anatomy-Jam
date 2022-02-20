@@ -18,7 +18,7 @@ namespace AnatomyJam.Manager
             InitCurrentZone();
         }
 
-        private void InitCurrentZone()
+        public void InitCurrentZone()
         {
             var curr = _zones[_currentZone];
             _bossNode = Random.Range(curr.NbOfEnemiesBeforeBoss.Min, curr.NbOfEnemiesBeforeBoss.Max);

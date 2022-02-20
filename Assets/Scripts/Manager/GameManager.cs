@@ -1,5 +1,6 @@
 using AnatomyJam.Character;
 using AnatomyJam.Map;
+using AnatomyJam.Player;
 using System.Collections;
 using UnityEngine;
 
@@ -69,8 +70,10 @@ namespace AnatomyJam.Manager
                         // Is hero party still alive?
                         if (!_party.IsPartyAlive)
                         {
-                            // TODO: Go back to the base to take new weapons
                             _isFighting = false;
+                            PlayerController.S.CanMove = false;
+                            RetreatManager.S.DisplayRetreat();
+                            _progress.InitCurrentZone(); // Reset progression
                         }
                     }
                 }

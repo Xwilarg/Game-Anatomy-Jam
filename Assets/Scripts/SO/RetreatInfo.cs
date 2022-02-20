@@ -12,5 +12,6 @@ namespace AnatomyJam.SO
         public float FadeTimeBackground;
         public float FadeTimeText;
         public float PercentTimer;
+        public float TimeWait;
     }
 }

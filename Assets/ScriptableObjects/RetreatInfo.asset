@@ -16,3 +16,4 @@ MonoBehaviour:
   FadeTimeBackground: 2
   FadeTimeText: 1
   PercentTimer: 2
+  TimeWait: 2

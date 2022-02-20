@@ -7,6 +7,13 @@ namespace AnatomyJam.Manager
 {
     public class RetreatManager : MonoBehaviour
     {
+        public static RetreatManager S;
+
+        private void Awake()
+        {
+            S = this;
+        }
+
         [SerializeField]
         private RetreatInfo _info;
 
@@ -14,20 +21,23 @@ namespace AnatomyJam.Manager
         private FadeImage _blackFade;
 
         [SerializeField]
-        private FadeText _mainText, _subText;
+        private FadeText[] _mainText;
+
+        [SerializeField]
+        private FadeText _subText, _fadePercentText;
 
         [SerializeField]
         private TMP_Text _percentText;
 
-        private int _currentRetreatChances;
+        private int _currentRetreatChances = 100;
 
         private float _timer = -1;
         private int _startChanceNb;
 
 
-        private void Start()
+        public void DisplayRetreat()
         {
-            /StartCoroutine(LaunchRetreat());
+            StartCoroutine(LaunchRetreat());
         }
 
         private IEnumerator LaunchRetreat()
@@ -40,21 +50,32 @@ namespace AnatomyJam.Manager
                 // TODO: Gameover
             }
 
-            _mainText.ResetColor();
-            _subText.ResetColor();
-
             _blackFade.LaunchFade(_info.FadeTimeBackground, true);
             yield return new WaitForSeconds(_info.FadeTimeBackground);
 
-            _mainText.LaunchFade(_info.FadeTimeBackground, true);
-            yield return new WaitForSeconds(_info.FadeTimeText);
-            _mainText.LaunchFade(_info.FadeTimeBackground, true);
-            yield return new WaitForSeconds(_info.FadeTimeText);
+            foreach (var mT in _mainText)
+            {
+                mT.LaunchFade(_info.FadeTimeBackground, true);
+                yield return new WaitForSeconds(_info.FadeTimeText);
+                yield return new WaitForSeconds(_info.TimeWait);
+            }
 
+            _subText.LaunchFade(_info.FadeTimeBackground, true);
+            yield return new WaitForSeconds(_info.FadeTimeText);
+            yield return new WaitForSeconds(_info.TimeWait / 2f);
+
+            _fadePercentText.ResetColor(false);
             _timer = _info.PercentTimer;
             yield return new WaitForSeconds(_info.PercentTimer);
 
             _blackFade.LaunchFade(_info.FadeTimeBackground, false);
+            foreach (var mT in _mainText)
+            {
+                mT.LaunchFade(_info.FadeTimeBackground, false);
+            }
+            _subText.LaunchFade(_info.FadeTimeBackground, false);
+            _fadePercentText.LaunchFade(_info.FadeTimeBackground, false);
+            yield return new WaitForSeconds(_info.FadeTimeBackground);
             yield return new WaitForSeconds(_info.FadeTimeBackground);
         }
 
@@ -69,7 +90,7 @@ namespace AnatomyJam.Manager
                 }
                 var diff = _startChanceNb - _currentRetreatChances;
                 var t = _info.PercentTimer - _timer;
-                var nb = _currentRetreatChances + Mathf.RoundToInt(_timer * diff / t);
+                var nb = _startChanceNb - Mathf.RoundToInt(t * diff / _info.PercentTimer);
                 _percentText.text = $"{nb}%";
             }
         }

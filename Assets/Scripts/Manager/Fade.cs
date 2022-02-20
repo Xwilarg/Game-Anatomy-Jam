@@ -42,9 +42,9 @@ namespace AnatomyJam.Manager
             }
         }
 
-        public void ResetColor()
+        public void ResetColor(bool transparent)
         {
-            _comp.color = new Color(_comp.color.r, _comp.color.g, _comp.color.b, 1f);
+            _comp.color = new Color(_comp.color.r, _comp.color.g, _comp.color.b, transparent ? 0f : 1f);
         }
     }
 }

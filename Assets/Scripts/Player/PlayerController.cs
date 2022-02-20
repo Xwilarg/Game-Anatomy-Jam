@@ -8,6 +8,13 @@ namespace AnatomyJam.Player
 {
     public class PlayerController : MonoBehaviour
     {
+        public static PlayerController S;
+
+        private void Awake()
+        {
+            S = this;
+        }
+
         [SerializeField]
         private Transform _handsContainer;
 
