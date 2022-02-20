@@ -205,7 +205,7 @@
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Gamepad",
+                    "groups": "Keyboard&Mouse",
                     "action": "Action",
                     "isComposite": false,
                     "isPartOfComposite": false

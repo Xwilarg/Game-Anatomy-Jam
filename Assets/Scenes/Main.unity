@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4366757, g: 0.48427194, b: 0.5645252, a: 1}
+  m_IndirectSpecularColor: {r: 0.4366756, g: 0.48427194, b: 0.5645252, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -805,7 +805,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &283688756
 MonoBehaviour:
@@ -1159,7 +1159,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1414027170}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Minigame.QuenchingManager, Assembly-CSharp
         m_MethodName: Hit
         m_Mode: 0
@@ -1171,7 +1171,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 400490444}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Minigame.InputCursor, Assembly-CSharp
         m_MethodName: Hit
         m_Mode: 0
@@ -1976,7 +1976,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
@@ -2070,7 +2070,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &717529690
 GameObject:
@@ -2448,7 +2448,7 @@ Transform:
   - {fileID: 92896518}
   - {fileID: 952429600}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &896343012
 PrefabInstance:
@@ -3141,7 +3141,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1154407797
 MonoBehaviour:
@@ -3343,7 +3343,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1148001857}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3671947838260021912, guid: 000a219cd50b36e428cb434a40ce83de, type: 3}
       propertyPath: m_Name
@@ -3892,8 +3892,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.14149179, y: 0.11928214, z: 0.20257299}
-  m_Center: {x: -0.0038669035, y: 0.06044107, z: -0.0008395612}
+  m_Size: {x: 0.14574894, y: 0.11928214, z: 0.20257299}
+  m_Center: {x: 0.05925526, y: 0.06044107, z: -0.0008395612}
 --- !u!114 &1292839946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3909,7 +3909,7 @@ MonoBehaviour:
   _recipes:
   - {fileID: 11400000, guid: 46ace7e4ddea50b418eaeda978fc913b, type: 2}
   _output: {fileID: 25802970}
-  minigame: {fileID: 400490441}
+  minigame: {fileID: 453738630}
   minigameBG: {fileID: 2047117744}
 --- !u!1 &1328245662
 GameObject:
@@ -3943,7 +3943,7 @@ Transform:
   - {fileID: 1590351923}
   - {fileID: 1220995476}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1337043790
 GameObject:
@@ -4243,7 +4243,7 @@ MonoBehaviour:
         m_MethodName: AddObjectToStation
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 1466904233}
           m_ObjectArgumentAssemblyTypeName: AnatomyJam.SceneObjects.Station.AStation,
             Assembly-CSharp
           m_IntArgument: 0
@@ -4251,7 +4251,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  _associatedStation: {fileID: 0}
+  _associatedStation: {fileID: 1466904233}
 --- !u!114 &1466904233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5310,7 +5310,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1148001857}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4612231198748833220, guid: 50dc398fac0eed94985a8e0ad5145815, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5870,7 +5870,7 @@ RectTransform:
   m_Children:
   - {fileID: 453738631}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

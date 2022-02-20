@@ -1,14 +1,13 @@
 ﻿using AnatomyJam.Player;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using System;
 
 namespace AnatomyJam.SceneObjects.Station
 {
     public class MinigameStation : AStation
     {
         [SerializeField]
-        private GameObject minigame;
+        private Minigame.AMiniGameManager minigame;
 
         [SerializeField]
         private GameObject minigameBG;
@@ -16,8 +15,6 @@ namespace AnatomyJam.SceneObjects.Station
         {
             var result = GetRecipe(obj);
             pc.CanMove = false;
-
-            PlayerInput PI = minigame.GetComponent<PlayerInput>();
 
             minigameBG.SetActive(true);
            // minigame.SetActive(true);
@@ -27,8 +24,7 @@ namespace AnatomyJam.SceneObjects.Station
                 pc.CanMove = true;
                 ThrowOnFloor(pc, obj, result);
             };
-            Minigame.AMiniGameManager manager = minigame.GetComponent<Minigame.AMiniGameManager>();
-            manager.RunMinigame(cb, 1);
+            minigame.RunMinigame(cb, 1);
             // TODO: Launch minigame
             // TODO: Once minigame is complete, call:
             // pc.CanMove = true;
