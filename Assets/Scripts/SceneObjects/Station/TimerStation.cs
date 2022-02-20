@@ -37,7 +37,7 @@ namespace AnatomyJam.SceneObjects.Station
                 {
                     _timer = 0f;
                     var result = GetRecipe(_obj);
-                    ThrowOnFloor(_pc, _obj, result, 0f, StationPolishAction.None);
+                    ThrowOnFloor(_pc, _obj, result, 0f, null);
                     _progress.gameObject.SetActive(false);
                 }
                 else
