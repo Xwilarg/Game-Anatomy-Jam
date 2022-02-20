@@ -93,7 +93,7 @@ namespace AnatomyJam.Player
             _inHands = go.GetComponent<SceneObject>();
             _inHands.Init(obj, go);
 
-            foreach (var coll in go.GetComponents<Collider>())
+            foreach (var coll in go.GetComponentsInChildren<Collider>())
             {
                 coll.enabled = false;
             }

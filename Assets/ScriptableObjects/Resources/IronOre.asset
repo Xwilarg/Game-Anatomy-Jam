@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50d6601bdebf96d4eb7597d7ce3a00d0, type: 3}
-  m_Name: IronBar
+  m_Name: IronOre
   m_EditorClassIdentifier: 
-  Name: Iron
-  GameObject: {fileID: 7615191702084067721, guid: 7f4b09f65a80de043b027d20d6eb16fb, type: 3}
-  ResourceType: 8
+  Name: Iron Ore
+  GameObject: {fileID: 5912883986252577723, guid: d89d711f6cc00274d97bf767ac25b694, type: 3}
+  ResourceType: 2
   Gem: 0
   Metal: 1
