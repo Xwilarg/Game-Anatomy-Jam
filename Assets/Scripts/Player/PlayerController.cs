@@ -14,6 +14,9 @@ namespace AnatomyJam.Player
         [SerializeField]
         private GameObject _pressE;
 
+        [SerializeField]
+        private PlayerInfo _info;
+
         private Rigidbody _rb;
         private Vector2 _mov;
 
@@ -108,7 +111,7 @@ namespace AnatomyJam.Player
 
         public void OnMovement(InputAction.CallbackContext value)
         {
-            _mov = value.ReadValue<Vector2>().normalized;
+            _mov = value.ReadValue<Vector2>().normalized * _info.BaseSpeed;
         }
 
         public void OnInterract(InputAction.CallbackContext value)

@@ -1,6 +1,5 @@
 ﻿using AnatomyJam.Player;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace AnatomyJam.SceneObjects.Station
 {
@@ -25,10 +24,6 @@ namespace AnatomyJam.SceneObjects.Station
                 ThrowOnFloor(pc, obj, result);
             };
             minigame.RunMinigame(cb, 1);
-            // TODO: Launch minigame
-            // TODO: Once minigame is complete, call:
-            // pc.CanMove = true;
-            // ThrowOnFloor(pc, obj, result);
         }
 
     }
