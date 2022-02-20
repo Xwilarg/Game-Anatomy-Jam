@@ -27,6 +27,7 @@ public class Sewing : Minigame.AMiniGameManager
     private bool safe = false;
 
     private Minigame.MinigameCallBack _cb;
+    private AudioSource _source;
 
     private void FixedUpdate()
     {
@@ -43,6 +44,7 @@ public class Sewing : Minigame.AMiniGameManager
         }
         if (Time.time >= targetTime)
         {
+            _source.Stop();
             _cb();
             gameObject.SetActive(false);
         }
@@ -59,8 +61,10 @@ public class Sewing : Minigame.AMiniGameManager
         targetTime = Time.time + baseTime;
         _slider.value = 0.5f;
         _cb = cb_result;
+        _source = GetComponent<AudioSource>();
 
         base.RunMinigame(cb_result, difficultyFactor);
+        _source.Play();
     }
     public IEnumerator ChangeBackColor()
     {
