@@ -35,9 +35,9 @@ namespace AnatomyJam.Character
         public bool CanAttack => _timeBeforeAttack <= 0f;
         public TargetType TargetType => _info.TargetType;
 
-        public void SetAnimationState(string name, bool state)
+        public void ToggleWalkAnimation(bool state)
         {
-            _display.SetAnimationState(name, state);
+            _display.ToggleWalkAnimation(state);
         }
 
         /// <summary>
@@ -62,6 +62,7 @@ namespace AnatomyJam.Character
         {
             var damage = Mathf.RoundToInt(Random.Range(_info.BaseAttack.Min, _info.BaseAttack.Max));
             target.TakeDamage(damage);
+            _display.TriggerAttackAnimation();
             ResetTimerAttack();
         }
 

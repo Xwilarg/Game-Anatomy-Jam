@@ -54,7 +54,6 @@ namespace AnatomyJam.Character
             {
                 _backgroundBaseColor = _background.color;
             }
-            
         }
 
         public void UpdateSprite(Sprite s)
@@ -62,9 +61,20 @@ namespace AnatomyJam.Character
             _sprite.sprite = s;
         }
 
-        public void SetAnimationState(string name, bool state)
+        public void ToggleWalkAnimation(bool state)
         {
-            _anim.SetBool(name, state);
+            if (_anim != null)
+            {
+                _anim.SetBool("IsWalking", state);
+            }
+        }
+
+        public void TriggerAttackAnimation()
+        {
+            if (_anim != null)
+            {
+                _anim.SetTrigger("Attack");
+            }
         }
 
         public void UpdateHealth(float value)
