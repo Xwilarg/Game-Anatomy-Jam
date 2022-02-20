@@ -89,6 +89,12 @@ namespace AnatomyJam.Player
         {
             var go = Instantiate(obj.GameObject, _handsContainer);
             go.transform.localPosition = Vector3.zero;
+            go.transform.localScale
+                = new Vector3(
+                    obj.GameObject.transform.localScale.x * (1f / transform.localScale.x),
+                    obj.GameObject.transform.localScale.y * (1f / transform.localScale.y),
+                    obj.GameObject.transform.localScale.z * (1f / transform.localScale.z)
+                    );
 
             _inHands = go.GetComponent<SceneObject>();
             _inHands.Init(obj, go);
