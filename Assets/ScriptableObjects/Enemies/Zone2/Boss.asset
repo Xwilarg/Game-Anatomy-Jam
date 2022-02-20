@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: Boss
   m_EditorClassIdentifier: 
   Name: Nara
-  BaseHealth: 1200
-  BaseMana: 1200
+  BaseHealth: 1400
+  BaseMana: 1400
   BaseArmor: 35
   BaseAttack:
     Min: 75
     Max: 100
   AttackSpeed:
-    Min: 4
-    Max: 5
+    Min: 3
+    Max: 4
   Class: 5
   TargetType: 1
   EnemySprite: {fileID: -1776621824, guid: 36c0930abcd43e14eb0e6b39c1e60118, type: 3}
