@@ -79,7 +79,7 @@ namespace Minigame
             _penalty = false;
         }
 
-        public override void RunMinigame(MinigameCallBack cb_result)
+        public override void RunMinigame(MinigameCallBack cb_result, int difficulty_factor)
         {
             _cb_result = cb_result;
         }
