@@ -42,6 +42,7 @@ namespace AnatomyJam.Character
         public bool IsAlive => _currentHealth > 0;
         public bool CanAttack => _timeBeforeAttack <= 0f;
         public TargetType TargetType => _info.TargetType;
+        public CharacterClass Class => _info.Class;
 
         public void ToggleWalkAnimation(bool state)
         {
