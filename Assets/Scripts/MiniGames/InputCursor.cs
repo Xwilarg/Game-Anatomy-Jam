@@ -25,10 +25,7 @@ namespace Minigame
 
         private MinigameCallBack _cb_result;
 
-        private void Start()
-        {
-
-        }
+        private AudioSource _source;
 
         public int GetHits()
         {
@@ -44,6 +41,11 @@ namespace Minigame
             {
                 var targetXtLeft = _target.localPosition.x - (_target.sizeDelta.x / 2f);
                 var targetXtRight = _target.localPosition.x + (_target.sizeDelta.x / 2f);
+                if (_source == null)
+                {
+                    _source = GetComponent<AudioSource>();
+                }
+                _source.Play();
                 if (_rect.localPosition.x >= targetXtLeft && _rect.localPosition.x <= targetXtRight)
                 {
                     StartCoroutine(ChangeBackColor());

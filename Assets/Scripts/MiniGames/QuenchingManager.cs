@@ -23,6 +23,8 @@ namespace Minigame
         private float _currentVal = 0f;
 
         private MinigameCallBack _cb_result;
+
+        private AudioSource _source;
         // Update is called once per frame
         void Update()
         {
@@ -48,6 +50,11 @@ namespace Minigame
                     _cb_result();
                     gameObject.SetActive(false);
                 }
+                if (_source == null)
+                {
+                    _source = GetComponent<AudioSource>();
+                }
+                _source.Play();
             }
 
         }

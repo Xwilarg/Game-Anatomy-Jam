@@ -66,6 +66,7 @@ namespace AnatomyJam.Player
             if (_mov != Vector2.zero)
             {
                 transform.rotation = Quaternion.LookRotation(new(_mov.x, 0f, _mov.y));
+                transform.Rotate(0f, -90f, 0f);
             }
         }
 
