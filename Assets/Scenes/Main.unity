@@ -1387,7 +1387,7 @@ GameObject:
   - component: {fileID: 425175862}
   - component: {fileID: 425175863}
   - component: {fileID: 425175864}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6345,7 +6345,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1767215747}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HandsContainer
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
