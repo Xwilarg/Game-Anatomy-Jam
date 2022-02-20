@@ -23,6 +23,14 @@ namespace AnatomyJam.Character
             return stillAlive[Random.Range(0, stillAlive.Length)];
         }
 
+        public void Revive()
+        {
+            foreach (var character in _team)
+            {
+                character.Revive();
+            }
+        }
+
         public void ReadyForFight()
         {
             foreach (var character in _team)

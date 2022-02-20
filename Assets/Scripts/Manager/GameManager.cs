@@ -72,8 +72,18 @@ namespace AnatomyJam.Manager
                         {
                             _isFighting = false;
                             PlayerController.S.CanMove = false;
-                            RetreatManager.S.DisplayRetreat();
-                            _progress.InitCurrentZone(); // Reset progression
+                            RetreatManager.S.DisplayRetreat(
+                                () =>
+                                {
+                                    _progress.InitCurrentZone(); // Reset progression
+                                    _displayEnemy.Toggle(false);
+                                    _party.Revive();
+                                },
+                                () =>
+                                {
+                                    PlayerController.S.CanMove = true;
+                                    StartCoroutine(BeginRun());
+                                });
                         }
                     }
                 }

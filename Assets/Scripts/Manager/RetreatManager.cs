@@ -1,4 +1,5 @@
 using AnatomyJam.SO;
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -35,23 +36,25 @@ namespace AnatomyJam.Manager
         private int _startChanceNb;
 
 
-        public void DisplayRetreat()
+        public void DisplayRetreat(Action _onReset, Action _onDone)
         {
-            StartCoroutine(LaunchRetreat());
+            StartCoroutine(LaunchRetreat(_onReset, _onDone));
         }
 
-        private IEnumerator LaunchRetreat()
+        private IEnumerator LaunchRetreat(Action _onReset, Action _onDone)
         {
             _startChanceNb = _currentRetreatChances;
             _currentRetreatChances -= _info.RetreatChanceMinus;
 
-            if (Random.Range(0, 100) < _currentRetreatChances)
+            if (UnityEngine.Random.Range(0, 100) < _currentRetreatChances)
             {
                 // TODO: Gameover
             }
 
             _blackFade.LaunchFade(_info.FadeTimeBackground, true);
             yield return new WaitForSeconds(_info.FadeTimeBackground);
+
+            _onReset?.Invoke();
 
             foreach (var mT in _mainText)
             {
@@ -76,7 +79,8 @@ namespace AnatomyJam.Manager
             _subText.LaunchFade(_info.FadeTimeBackground, false);
             _fadePercentText.LaunchFade(_info.FadeTimeBackground, false);
             yield return new WaitForSeconds(_info.FadeTimeBackground);
-            yield return new WaitForSeconds(_info.FadeTimeBackground);
+
+            _onDone?.Invoke();
         }
 
         private void Update()

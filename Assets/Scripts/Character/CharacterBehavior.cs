@@ -31,6 +31,14 @@ namespace AnatomyJam.Character
             }
         }
 
+        public void Revive()
+        {
+            _currentHealth = _maxHealth;
+            _currentMana = _maxMana;
+            _display.Init(_info);
+            _display.Toggle(true);
+        }
+
         public bool IsAlive => _currentHealth > 0;
         public bool CanAttack => _timeBeforeAttack <= 0f;
         public TargetType TargetType => _info.TargetType;
