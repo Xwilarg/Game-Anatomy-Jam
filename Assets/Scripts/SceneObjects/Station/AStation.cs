@@ -27,7 +27,7 @@ namespace AnatomyJam.SceneObjects.Station
             obj.Resource = result.Output.ResourceType;
             obj.GameObject = Instantiate(result.Output.GameObject, _output.position, Random.rotation);
             var opDir = (_output.position - transform.position).normalized;
-            obj.GameObject.GetComponent<Rigidbody>().AddForce((opDir + Vector3.up).normalized * 2f, ForceMode.Impulse);
+            obj.GameObject.GetComponent<Rigidbody>().AddForce((opDir + Vector3.up).normalized * 10f, ForceMode.Impulse);
             obj.GameObject.GetComponent<Interactible>().AddListener(() =>
             {
                 Destroy(obj.GameObject);
