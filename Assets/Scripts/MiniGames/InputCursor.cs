@@ -5,7 +5,7 @@ using System.Collections;
 
 namespace Minigame
 {
-    public class InputCursor : MonoBehaviour
+    public class InputCursor : AMiniGameManager
     {
         private RectTransform _rect;
 
@@ -18,11 +18,16 @@ namespace Minigame
         private GameObject _targetRect;
 
         [SerializeField]
+        private GameObject _movingRect;
+
+        [SerializeField]
         private int _targetHit = 5;
+
+        private MinigameCallBack _cb_result;
 
         private void Start()
         {
-            _rect = (RectTransform)transform;
+            _rect = (RectTransform)_movingRect.transform;
             _target = (RectTransform)_targetRect.transform;
         }
 
@@ -43,7 +48,8 @@ namespace Minigame
                     Hits++;
                     if (Hits >= _targetHit)
                     {
-                        Debug.Log("C'est gagné!");
+                        _cb_result();
+                        Destroy(gameObject);
                     }
                 }
                 else
@@ -71,6 +77,11 @@ namespace Minigame
 
             _targetRect.GetComponent<Image>().color = Color.white;
             _penalty = false;
+        }
+
+        public override void RunMinigame(MinigameCallBack cb_result)
+        {
+            _cb_result = cb_result;
         }
     }
 }
