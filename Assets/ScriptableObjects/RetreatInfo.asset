@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3c04b7c8b15df459393ac99b258744, type: 3}
   m_Name: RetreatInfo
   m_EditorClassIdentifier: 
-  FadeTime: 2
+  RetreatChanceMinus: 10
+  FadeTimeBackground: 2
+  FadeTimeText: 1
+  PercentTimer: 2
