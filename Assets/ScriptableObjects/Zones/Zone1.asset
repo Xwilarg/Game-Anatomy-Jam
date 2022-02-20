@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4266cb65fe00ce4295e1984061d380c, type: 3}
   m_Name: Zone1
   m_EditorClassIdentifier: 
-  Name: Human Territory
+  Name: Plains
   Encounters:
   - {fileID: 11400000, guid: dee5df0041722314ab60c5cc5f5cf8e0, type: 2}
+  - {fileID: 11400000, guid: 33cfffcec5d53e0429a9d4fde0d78ec5, type: 2}
   Boss: {fileID: 11400000, guid: f5c4457a992c85947a2b5a8618c1d805, type: 2}
-  UnlockedResources: 0800000002000000
+  UnlockedResources: 
   NbOfEnemiesBeforeBoss:
     Min: 3
     Max: 5

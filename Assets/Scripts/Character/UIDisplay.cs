@@ -24,16 +24,19 @@ namespace AnatomyJam.Character
         [SerializeField]
         private SpriteRenderer _sprite;
 
+        private Animator _anim;
+
         private Color _backgroundBaseColor;
 
         public SO.CharacterInfo Info => _info;
 
-        private void Start()
+        private void Awake()
         {
             if (_background != null)
             {
                 _background.color = _backgroundBaseColor;
             }
+            _anim = _sprite.GetComponent<Animator>();
         }
 
         public void Toggle(bool value)
@@ -50,6 +53,27 @@ namespace AnatomyJam.Character
             if (_background != null)
             {
                 _backgroundBaseColor = _background.color;
+            }
+        }
+
+        public void UpdateSprite(Sprite s)
+        {
+            _sprite.sprite = s;
+        }
+
+        public void ToggleWalkAnimation(bool state)
+        {
+            if (_anim != null)
+            {
+                _anim.SetBool("IsWalking", state);
+            }
+        }
+
+        public void TriggerAttackAnimation()
+        {
+            if (_anim != null)
+            {
+                _anim.SetTrigger("Attack");
             }
         }
 

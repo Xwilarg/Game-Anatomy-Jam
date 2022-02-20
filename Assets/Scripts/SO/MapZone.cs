@@ -1,4 +1,5 @@
-﻿using AnatomyJam.Util;
+﻿using AnatomyJam.Material;
+using AnatomyJam.Util;
 using UnityEngine;
 
 namespace AnatomyJam.SO

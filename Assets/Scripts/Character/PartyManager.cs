@@ -10,7 +10,7 @@ namespace AnatomyJam.Character
 
         private CharacterBehavior[] _team;
 
-        private void Start()
+        private void Awake()
         {
             _team = _displays.Select(x => new CharacterBehavior(x, x.Info)).ToArray();
         }
@@ -28,6 +28,14 @@ namespace AnatomyJam.Character
             foreach (var character in _team)
             {
                 character.ReadyForFight();
+            }
+        }
+
+        public void SetRunningState(bool value)
+        {
+            foreach (var character in _team)
+            {
+                character.ToggleWalkAnimation(value);
             }
         }
 
