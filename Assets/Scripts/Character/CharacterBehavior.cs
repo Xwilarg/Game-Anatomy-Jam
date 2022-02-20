@@ -105,9 +105,9 @@ namespace AnatomyJam.Character
         /// <summary>
         /// Called every frame, reduce the attack timer
         /// </summary>
-        public void PassTime(float deltaTime)
+        public void PassTime(float deltaTime, float timeMult = 1f)
         {
-            _timeBeforeAttack -= deltaTime;
+            _timeBeforeAttack -= deltaTime * timeMult;
         }
 
         /// <summary>
