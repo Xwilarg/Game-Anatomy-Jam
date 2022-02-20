@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a0e7f05d4473c0a4f85ea6b7e78d95c7
+guid: 3b57d92b6ed6b0a45980a584eae49025
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -66,7 +66,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 256
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: monster spritesheet_0
+      name: overlord spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7403bd58b96a16b4383a0ac09bc75c59
-      internalID: 807313694
+      spriteID: cbe4314ac0e0fb84abc532842b8139fa
+      internalID: 1496857152
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: monster spritesheet_1
+      name: overlord spritesheet_1
       rect:
         serializedVersion: 2
         x: 48
@@ -139,14 +139,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b0ea600490be104cac4ee4599b4286d
-      internalID: 586843073
+      spriteID: c985cd0c0846a6b4aa9b4795614e53ad
+      internalID: -1464941368
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: monster spritesheet_2
+      name: overlord spritesheet_2
       rect:
         serializedVersion: 2
         x: 96
@@ -160,14 +160,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0c1e15b5b7d7ac468394e3c341a21d8
-      internalID: 585505076
+      spriteID: c011effc49f608048aa784ce57f8344d
+      internalID: -912021323
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: monster spritesheet_3
+      name: overlord spritesheet_3
       rect:
         serializedVersion: 2
         x: 144
@@ -181,134 +181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f062457262da054ba76841c0a724579
-      internalID: -1948791379
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: monster spritesheet_4
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 12758fc23e120ed4dae1b0d120c1329b
-      internalID: 2123781021
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: monster spritesheet_5
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 968b1e9af36764349b9b4a73ebd9eca3
-      internalID: 58908065
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: monster spritesheet_6
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8524ba00fc935b24f849ff5f74b29091
-      internalID: -329280461
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: monster spritesheet_7
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 54c97c31d6d2a71439989bae13658d9b
-      internalID: -1872571246
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: monster spritesheet_8
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1356c099a220ce34880a85a062407cf0
-      internalID: -50150623
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: monster spritesheet_9
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f782199c8c48d6d499fa4806fec11398
-      internalID: -1595982783
+      spriteID: 5ae516716baa38149979b78859170e2c
+      internalID: -1318607009
       vertices: []
       indices: 
       edges: []
@@ -316,7 +190,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 94ace29fea930054b80e3f71eb4f6d24
+    spriteID: b4687ead87568404ebe71d94e6723853
     internalID: 0
     vertices: []
     indices: 
@@ -324,16 +198,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      monster spritesheet_4: 2123781021
-      monster spritesheet_0: 807313694
-      monster spritesheet_1: 586843073
-      monster spritesheet_2: 585505076
-      monster spritesheet_7: -1872571246
-      monster spritesheet_9: -1595982783
-      monster spritesheet_5: 58908065
-      monster spritesheet_6: -329280461
-      monster spritesheet_8: -50150623
-      monster spritesheet_3: -1948791379
+      overlord spritesheet_0: 1496857152
+      overlord spritesheet_1: -1464941368
+      overlord spritesheet_3: -1318607009
+      overlord spritesheet_2: -912021323
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
