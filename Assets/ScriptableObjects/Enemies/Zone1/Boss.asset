@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Boss
   m_EditorClassIdentifier: 
   Name: Ephyta
-  BaseHealth: 5
+  BaseHealth: 500
   BaseMana: 500
   BaseArmor: 15
   BaseAttack:

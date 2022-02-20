@@ -4691,11 +4691,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9edddcd1eac2fe14ea26b4f61f0d3e3f, type: 2}
   - {fileID: 11400000, guid: c8229ac37f54aa74baf837c9197cb640, type: 2}
   _animWin: {fileID: 1736717947}
-  _anim1: {fileID: 22100000, guid: b9493e2d1c61557469bd058f933c9a8d, type: 2}
-  _anim2: {fileID: 22100000, guid: 199563bbdff3e314bba0a0e140d7d7f4, type: 2}
-  _anim3: {fileID: 0}
   _village2Unlock: {fileID: 550398337}
   _village3Unlock: {fileID: 0}
+  _animInfo: {fileID: 11400000, guid: 36b452988b785a742acd266c38613a8f, type: 2}
 --- !u!1 &1181511625
 GameObject:
   m_ObjectHideFlags: 0
@@ -6940,7 +6938,7 @@ Animator:
   m_GameObject: {fileID: 1736717945}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: b9493e2d1c61557469bd058f933c9a8d, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6b83420c12a4d384e9d6ebd629ff607f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

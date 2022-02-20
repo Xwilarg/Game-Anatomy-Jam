@@ -24,6 +24,9 @@ namespace AnatomyJam.Manager
         [SerializeField]
         private GameObject _village2Unlock, _village3Unlock;
 
+        [SerializeField]
+        private SO.AnimationInfo _animInfo;
+
         private int _currentZone;
         private int _currentFight;
 
@@ -54,19 +57,18 @@ namespace AnatomyJam.Manager
             if (_currentFight == _bossNode)
             {
                 _animWin.gameObject.SetActive(true);
-                _animWin.SetInteger("CurrentProgression", _currentZone);
 
-                if (_currentZone == 1)
+                if (_currentZone == 0)
                 {
                     _village2Unlock.SetActive(true);
                 }
-                else if (_currentZone == 2)
+                else if (_currentZone == 1)
                 {
                     _village3Unlock.SetActive(true);
                 }
+                StartCoroutine(WaitAnimEnd(next, _currentZone));
                 _currentZone++;
 
-                StartCoroutine(WaitAnimEnd(next));
                 InitCurrentZone();
             }
             else
@@ -76,11 +78,11 @@ namespace AnatomyJam.Manager
             }
         }
 
-        public IEnumerator WaitAnimEnd(System.Action next)
+        public IEnumerator WaitAnimEnd(System.Action next, int index)
         {
             PlayerController.S.CanMove = false;
 
-            yield return new WaitForSeconds(3.4f);
+            yield return new WaitForSeconds(_animInfo.Duration[index]);
             _animWin.gameObject.SetActive(false);
             next?.Invoke();
 
