@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Ephyta
   BaseHealth: 500
   BaseMana: 500
-  BaseArmor: 50
+  BaseArmor: 0
   BaseAttack:
     Min: 40
     Max: 60

@@ -5,6 +5,13 @@ namespace AnatomyJam.Manager
 {
     public class ProgressManager : MonoBehaviour
     {
+        public static ProgressManager S;
+
+        private void Awake()
+        {
+            S = this;
+        }
+
         [SerializeField]
         private MapZone[] _zones;
 
@@ -12,6 +19,8 @@ namespace AnatomyJam.Manager
         private int _currentFight;
 
         private int _bossNode;
+
+        public MapZone CurrentZone => _zones[_currentZone];
 
         private void Start()
         {

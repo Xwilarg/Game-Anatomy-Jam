@@ -25,5 +25,9 @@ namespace AnatomyJam.SO
 
         [Tooltip("Number of enemies before the party reach the boss")]
         public Range<int> NbOfEnemiesBeforeBoss;
+
+        [Header("Sprite data")]
+
+        public Sprite[] _spriteGrass, _spritePath, _spritePathLeft, _spritePathRight;
     }
 }

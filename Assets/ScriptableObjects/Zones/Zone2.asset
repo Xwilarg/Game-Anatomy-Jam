@@ -21,3 +21,19 @@ MonoBehaviour:
   NbOfEnemiesBeforeBoss:
     Min: 5
     Max: 8
+  _spriteGrass:
+  - {fileID: -667519229, guid: 8263441027a6b8b4999c1ec9e108b12e, type: 3}
+  - {fileID: -524035584, guid: 8263441027a6b8b4999c1ec9e108b12e, type: 3}
+  - {fileID: 1414866915, guid: 8263441027a6b8b4999c1ec9e108b12e, type: 3}
+  _spritePath:
+  - {fileID: -667519229, guid: 8263441027a6b8b4999c1ec9e108b12e, type: 3}
+  - {fileID: -524035584, guid: 8263441027a6b8b4999c1ec9e108b12e, type: 3}
+  - {fileID: 1414866915, guid: 8263441027a6b8b4999c1ec9e108b12e, type: 3}
+  _spritePathLeft:
+  - {fileID: -667519229, guid: 8263441027a6b8b4999c1ec9e108b12e, type: 3}
+  - {fileID: -524035584, guid: 8263441027a6b8b4999c1ec9e108b12e, type: 3}
+  - {fileID: 1414866915, guid: 8263441027a6b8b4999c1ec9e108b12e, type: 3}
+  _spritePathRight:
+  - {fileID: -667519229, guid: 8263441027a6b8b4999c1ec9e108b12e, type: 3}
+  - {fileID: -524035584, guid: 8263441027a6b8b4999c1ec9e108b12e, type: 3}
+  - {fileID: 1414866915, guid: 8263441027a6b8b4999c1ec9e108b12e, type: 3}

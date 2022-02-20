@@ -28,6 +28,7 @@ namespace AnatomyJam.Manager
         private void Start()
         {
             _progress = GetComponent<ProgressManager>();
+            MapScroller.S.ResetAll(_progress.CurrentZone);
             StartCoroutine(BeginRun());
         }
 
@@ -78,6 +79,7 @@ namespace AnatomyJam.Manager
                                     _progress.InitCurrentZone(); // Reset progression
                                     _displayEnemy.Toggle(false);
                                     _party.Revive();
+                                    MapScroller.S.ResetAll(_progress.CurrentZone);
                                 },
                                 () =>
                                 {
