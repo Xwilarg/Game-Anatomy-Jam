@@ -139,6 +139,12 @@ namespace AnatomyJam.Player
             }
         }
 
+        public void RemoveItemInHands()
+        {
+            _inHands.DestroyObject();
+            _inHands = null;
+        }
+
         public void OnMovement(InputAction.CallbackContext value)
         {
             _mov = value.ReadValue<Vector2>().normalized * _info.BaseSpeed;
@@ -158,7 +164,7 @@ namespace AnatomyJam.Player
         private void OnTriggerEnter(Collider other)
         {
             var otherC = other.GetComponent<Interactible>();
-            if (otherC != null && otherC.IsValid(_inHands))
+            if (otherC != null && ((otherC.CompareTag("GarbageCan") && _inHands != null) || (!otherC.CompareTag("GarbageCan") && otherC.IsValid(_inHands))))
             {
                 _currentInteraction = otherC;
                 _pressE.SetActive(true);
