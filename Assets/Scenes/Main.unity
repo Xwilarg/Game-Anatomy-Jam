@@ -2992,6 +2992,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 425175858}
+--- !u!114 &1029505282 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3671947838260021919, guid: 000a219cd50b36e428cb434a40ce83de, type: 3}
+  m_PrefabInstance: {fileID: 1188726234}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46007be6eb373cf4ebe7bcccd6767674, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1098821193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3909,7 +3920,7 @@ MonoBehaviour:
   _recipes:
   - {fileID: 11400000, guid: 46ace7e4ddea50b418eaeda978fc913b, type: 2}
   _output: {fileID: 25802970}
-  minigame: {fileID: 453738630}
+  minigame: {fileID: 1029505282}
   minigameBG: {fileID: 2047117744}
 --- !u!1 &1328245662
 GameObject:
