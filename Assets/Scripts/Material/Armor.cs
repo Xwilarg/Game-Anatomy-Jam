@@ -5,8 +5,8 @@ namespace AnatomyJam.Material
     public class Armor : MonoBehaviour
     {
         [SerializeField]
-        private int _value;
+        private float _value;
 
-        public int Value => _value;
+        public float Value => _value;
     }
 }

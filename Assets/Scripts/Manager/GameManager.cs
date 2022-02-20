@@ -98,11 +98,5 @@ namespace AnatomyJam.Manager
                 }
             }
         }
-
-        public void ReceiveItem(int heroID)
-        {
-            SceneObjects.SceneObject SO = PlayerController.S._inHands;
-            _party.GiveItem(1, (SO.CharacterClass)heroID);
-        }
     }
 }

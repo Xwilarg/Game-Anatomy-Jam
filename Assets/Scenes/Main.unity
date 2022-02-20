@@ -612,20 +612,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 6fb408f932b2a22478af9d7f355f0c75, type: 2}
     - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
+      propertyPath: _associatedStation
+      value: 
+      objectReference: {fileID: 983719652}
+    - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1154407795}
+      objectReference: {fileID: 425175864}
     - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ReceiveItem
+      value: AddObjectToStation
       objectReference: {fileID: 0}
     - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: AnatomyJam.Manager.GameManager, Assembly-CSharp
+      value: AnatomyJam.Player.PlayerController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
@@ -634,10 +638,10 @@ PrefabInstance:
     - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 983719652}
     - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: AnatomyJam.SceneObjects.Station.AStation, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5604722565023797549, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1169,20 +1173,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 6fb408f932b2a22478af9d7f355f0c75, type: 2}
     - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
+      propertyPath: _associatedStation
+      value: 
+      objectReference: {fileID: 324588467}
+    - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1154407795}
+      objectReference: {fileID: 425175864}
     - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ReceiveItem
+      value: AddObjectToStation
       objectReference: {fileID: 0}
     - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: AnatomyJam.Manager.GameManager, Assembly-CSharp
+      value: AnatomyJam.Player.PlayerController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
@@ -1191,10 +1199,10 @@ PrefabInstance:
     - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 324588467}
     - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: AnatomyJam.SceneObjects.Station.AStation, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5604722565023797549, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1497,11 +1505,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05084d6c6c2a0914cb07cd5a9085e031, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &324588463 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 136299681009528227, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
+  m_PrefabInstance: {fileID: 225883402}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &324588464 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 770092974534178585, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
   m_PrefabInstance: {fileID: 225883402}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &324588467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324588463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3789b855f1b894cb85e6fb2d54e5a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _recipes: []
+  _output: {fileID: 0}
+  _target: 1
 --- !u!1001 &386964514
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1862,7 +1890,6 @@ MonoBehaviour:
   _handsContainer: {fileID: 1767215747}
   _pressE: {fileID: 479723569}
   _info: {fileID: 11400000, guid: e94d4adcc8d25c2419242b21d486bc3f, type: 2}
-  _inHands: {fileID: 0}
 --- !u!1 &453738630
 GameObject:
   m_ObjectHideFlags: 0
@@ -4424,11 +4451,31 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 978863646}
   m_CullTransparentMesh: 1
+--- !u!1 &983719648 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 136299681009528227, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
+  m_PrefabInstance: {fileID: 93127121}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &983719649 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 770092974534178585, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
   m_PrefabInstance: {fileID: 93127121}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &983719652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983719648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3789b855f1b894cb85e6fb2d54e5a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _recipes: []
+  _output: {fileID: 0}
+  _target: 2
 --- !u!114 &1029505282 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3671947838260021919, guid: 000a219cd50b36e428cb434a40ce83de, type: 3}
@@ -5742,11 +5789,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05084d6c6c2a0914cb07cd5a9085e031, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1374289819 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 136299681009528227, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
+  m_PrefabInstance: {fileID: 1793083549}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1374289820 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 770092974534178585, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
   m_PrefabInstance: {fileID: 1793083549}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1374289823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374289819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3789b855f1b894cb85e6fb2d54e5a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _recipes: []
+  _output: {fileID: 0}
+  _target: 3
 --- !u!1 &1385565067
 GameObject:
   m_ObjectHideFlags: 0
@@ -7084,20 +7151,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 6fb408f932b2a22478af9d7f355f0c75, type: 2}
     - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
+      propertyPath: _associatedStation
+      value: 
+      objectReference: {fileID: 1374289823}
+    - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1154407795}
+      objectReference: {fileID: 425175864}
     - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ReceiveItem
+      value: AddObjectToStation
       objectReference: {fileID: 0}
     - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: AnatomyJam.Manager.GameManager, Assembly-CSharp
+      value: AnatomyJam.Player.PlayerController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
@@ -7106,10 +7177,10 @@ PrefabInstance:
     - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1374289823}
     - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: AnatomyJam.SceneObjects.Station.AStation, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5604722565023797549, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -8482,6 +8553,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 770092974534178585, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
   m_PrefabInstance: {fileID: 7568326915674067846}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7560456277316714021 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 136299681009528227, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
+  m_PrefabInstance: {fileID: 7568326915674067846}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7560456277316714024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7560456277316714021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3789b855f1b894cb85e6fb2d54e5a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _recipes: []
+  _output: {fileID: 0}
+  _target: 0
 --- !u!1001 &7568326915674067846
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8550,28 +8641,32 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 6fb408f932b2a22478af9d7f355f0c75, type: 2}
     - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
+      propertyPath: _associatedStation
+      value: 
+      objectReference: {fileID: 7560456277316714024}
+    - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1154407795}
+      objectReference: {fileID: 425175864}
     - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ReceiveItem
+      value: AddObjectToStation
       objectReference: {fileID: 0}
     - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: AnatomyJam.Manager.GameManager, Assembly-CSharp
+      value: AnatomyJam.Player.PlayerController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7560456277316714024}
     - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: AnatomyJam.SceneObjects.Station.AStation, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5604722565023797549, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: m_Materials.Array.data[0]

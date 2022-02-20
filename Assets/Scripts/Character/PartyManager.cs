@@ -1,11 +1,12 @@
 ﻿using System.Linq;
 using UnityEngine;
-using System.Collections.Generic;
 
 namespace AnatomyJam.Character
 {
     public class PartyManager : MonoBehaviour
     {
+        public static PartyManager S;
+
         [SerializeField]
         public UIDisplay[] _displays;
 
@@ -13,6 +14,7 @@ namespace AnatomyJam.Character
 
         private void Awake()
         {
+            S = this;
             _team = _displays.Select(x => new CharacterBehavior(x, x.Info)).ToArray();
         }
 
@@ -74,7 +76,7 @@ namespace AnatomyJam.Character
             }
         }
 
-        public void GiveItem(int level, SO.CharacterClass hero_ID)
+        public void GiveItem(float level, SO.CharacterClass hero_ID)
         {
             _team.FirstOrDefault(x => x.Class == hero_ID).NextEquipement += level;
         }

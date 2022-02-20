@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50d6601bdebf96d4eb7597d7ce3a00d0, type: 3}
-  m_Name: Mat T1+
+  m_Script: {fileID: 11500000, guid: 68875bfcd35dac44199190b45459140a, type: 3}
+  m_Name: ArmorDeposit
   m_EditorClassIdentifier: 
-  Name: Material T1+
-  GameObject: {fileID: 3251943502638431517, guid: 9945dcd1f98526e4991fa5b1a45fec05, type: 3}
-  ResourceType: 5
-  Gem: 1
-  Metal: 1
+  Input: {fileID: 11400000, guid: 67398ba0d941f5441a3467d2a8f833a8, type: 2}
+  Output: {fileID: 0}
