@@ -24,11 +24,21 @@ namespace AnatomyJam.Character
             _currentHealth = _maxHealth;
             _currentMana = _maxMana;
             display.Init(info);
+
+            if (info.EnemySprite != null)
+            {
+                _display.UpdateSprite(info.EnemySprite);
+            }
         }
 
         public bool IsAlive => _currentHealth > 0;
         public bool CanAttack => _timeBeforeAttack <= 0f;
         public TargetType TargetType => _info.TargetType;
+
+        public void ToggleWalkAnimation(bool state)
+        {
+            _display.ToggleWalkAnimation(state);
+        }
 
         /// <summary>
         /// Lower health given the damage given in parameter
@@ -42,7 +52,7 @@ namespace AnatomyJam.Character
                 value = Mathf.Clamp(value - _info.BaseArmor, 0, value);
             }
             _currentHealth = Mathf.Clamp(_currentHealth - value, 0, _maxHealth);
-            _display.UpdateHealth(value, _maxHealth);
+            _display.UpdateHealth((float)_currentHealth / _maxHealth);
         }
 
         /// <summary>
@@ -50,7 +60,9 @@ namespace AnatomyJam.Character
         /// </summary>
         public void Attack(CharacterBehavior target)
         {
-            target.TakeDamage(Mathf.RoundToInt(Random.Range(_info.BaseAttack.Min, _info.BaseAttack.Max)));
+            var damage = Mathf.RoundToInt(Random.Range(_info.BaseAttack.Min, _info.BaseAttack.Max));
+            target.TakeDamage(damage);
+            _display.TriggerAttackAnimation();
             ResetTimerAttack();
         }
 
