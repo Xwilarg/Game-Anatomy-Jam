@@ -19,21 +19,15 @@ MonoBehaviour:
   Boss: {fileID: 11400000, guid: cb3d73551cca19c4f8dcec7530ae6f58, type: 2}
   UnlockedResources: 
   NbOfEnemiesBeforeBoss:
-    Min: 5
-    Max: 8
+    Min: 8
+    Max: 11
   _spriteGrass:
-  - {fileID: -667519229, guid: 8263441027a6b8b4999c1ec9e108b12e, type: 3}
-  - {fileID: -524035584, guid: 8263441027a6b8b4999c1ec9e108b12e, type: 3}
-  - {fileID: 1414866915, guid: 8263441027a6b8b4999c1ec9e108b12e, type: 3}
+  - {fileID: -639332997, guid: 8263441027a6b8b4999c1ec9e108b12e, type: 3}
   _spritePath:
-  - {fileID: -667519229, guid: 8263441027a6b8b4999c1ec9e108b12e, type: 3}
-  - {fileID: -524035584, guid: 8263441027a6b8b4999c1ec9e108b12e, type: 3}
-  - {fileID: 1414866915, guid: 8263441027a6b8b4999c1ec9e108b12e, type: 3}
+  - {fileID: -1611721328, guid: 8263441027a6b8b4999c1ec9e108b12e, type: 3}
+  - {fileID: 798387483, guid: 8263441027a6b8b4999c1ec9e108b12e, type: 3}
+  - {fileID: -903592775, guid: 8263441027a6b8b4999c1ec9e108b12e, type: 3}
   _spritePathLeft:
-  - {fileID: -667519229, guid: 8263441027a6b8b4999c1ec9e108b12e, type: 3}
-  - {fileID: -524035584, guid: 8263441027a6b8b4999c1ec9e108b12e, type: 3}
-  - {fileID: 1414866915, guid: 8263441027a6b8b4999c1ec9e108b12e, type: 3}
+  - {fileID: 2064773519, guid: 8263441027a6b8b4999c1ec9e108b12e, type: 3}
   _spritePathRight:
-  - {fileID: -667519229, guid: 8263441027a6b8b4999c1ec9e108b12e, type: 3}
-  - {fileID: -524035584, guid: 8263441027a6b8b4999c1ec9e108b12e, type: 3}
-  - {fileID: 1414866915, guid: 8263441027a6b8b4999c1ec9e108b12e, type: 3}
+  - {fileID: -712540718, guid: 8263441027a6b8b4999c1ec9e108b12e, type: 3}

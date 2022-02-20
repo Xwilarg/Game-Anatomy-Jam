@@ -4869,6 +4869,7 @@ MonoBehaviour:
   _zones:
   - {fileID: 11400000, guid: 9edddcd1eac2fe14ea26b4f61f0d3e3f, type: 2}
   - {fileID: 11400000, guid: c8229ac37f54aa74baf837c9197cb640, type: 2}
+  - {fileID: 11400000, guid: 28ad9dc4e265faf4ba8425729839ec7b, type: 2}
   _animWin: {fileID: 1736717947}
   _village2Unlock: {fileID: 550398337}
   _village3Unlock: {fileID: 523664098}
