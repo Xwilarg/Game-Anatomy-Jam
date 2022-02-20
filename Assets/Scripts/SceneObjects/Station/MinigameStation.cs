@@ -36,19 +36,27 @@ namespace AnatomyJam.SceneObjects.Station
             pc.CanMove = false;
 
             float val = 0f;
+            string text = null;
             var armor = obj.GetComponent<Armor>();
             if (armor != null)
             {
                 val = armor.Value + .5f;
+                if (_polish == StationPolishAction.Sharpen)
+                {
+                    text = obj.GameObject.GetComponentInChildren<TMP_Text>().text + "+";
+                }
+                else
+                {
+                    text = obj.GameObject.GetComponentInChildren<TMP_Text>().text.Replace('1', '2');
+                }
             }
 
             minigameBG.SetActive(true);
-           // minigame.SetActive(true);
             Minigame.MinigameCallBack cb = () =>
             {
                 minigameBG.SetActive(false);
                 pc.CanMove = true;
-                ThrowOnFloor(pc, obj, result, val, _polish);
+                ThrowOnFloor(pc, obj, result, val, text);
             };
             minigame.RunMinigame(cb, 1);
         }

@@ -20,7 +20,7 @@ namespace AnatomyJam.SceneObjects.Station
 
         public virtual bool IsValid(SceneObject _) => true;
 
-        protected void ThrowOnFloor(PlayerController pc, SceneObject obj, RecipeInfo result, float newArmValue, StationPolishAction action)
+        protected void ThrowOnFloor(PlayerController pc, SceneObject obj, RecipeInfo result, float newArmValue, string newText)
         {
             if (result.Output.ResourceType == ResourceType.None) // This formula craft nothing
             {
@@ -29,17 +29,10 @@ namespace AnatomyJam.SceneObjects.Station
 
             obj.Resource = result.Output.ResourceType;
             obj.GameObject = Instantiate(result.Output.GameObject, _output.position, Random.rotation);
-            if (action != StationPolishAction.None)
+            if (newText != null)
             {
                 obj.GameObject.GetComponent<Armor>().Value = newArmValue;
-                if (action == StationPolishAction.Sharpen)
-                {
-                    obj.GameObject.GetComponentInChildren<TMP_Text>().text += "+";
-                }
-                else
-                {
-                    obj.GameObject.GetComponentInChildren<TMP_Text>().text.Replace('1', '2');
-                }
+                obj.GameObject.GetComponentInChildren<TMP_Text>().text = newText;
             }
             var opDir = (_output.position - transform.position).normalized;
             obj.GameObject.GetComponent<Rigidbody>().AddForce((opDir + Vector3.up).normalized * 10f, ForceMode.Impulse);
@@ -53,7 +46,7 @@ namespace AnatomyJam.SceneObjects.Station
                 instance.Metal = obj.Metal;
                 instance.ResourceType = obj.Resource;
                 instance.Name = result.Output.Name;
-                pc.AddObjectInHands(instance);
+                pc.AddObjectInHands(instance, newArmValue, newText);
             });
         }
 
