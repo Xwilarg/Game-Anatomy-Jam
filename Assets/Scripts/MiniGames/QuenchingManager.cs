@@ -5,38 +5,54 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
-public class QuenchingManager : MonoBehaviour
+namespace Minigame
 {
-    [SerializeField]
-    private Slider _scroller;
-
-    [SerializeField]
-    private TMP_Text _text;
-
-
-    private float _negative_rate = 0.3f;
-
-    private float _positive_rate = 0.05f;
-
-    private float _currentVal = 0f;
-    // Update is called once per frame
-    void Update()
+    public class QuenchingManager : AMiniGameManager
     {
-        _currentVal -= _negative_rate * Time.deltaTime;
-        if (_currentVal < 0)
-            _currentVal = 0;
-        _scroller.value = _currentVal;
+        [SerializeField]
+        private Slider _scroller;
 
-    }
+        [SerializeField]
+        private TMP_Text _text;
 
 
-    public void Hit(InputAction.CallbackContext value)
-    {
-        if (value.phase == InputActionPhase.Started)
+        private float _negative_rate = 0.3f;
+
+        private float _positive_rate = 0.05f;
+
+        private float _currentVal = 0f;
+
+        private MinigameCallBack _cb_result;
+        // Update is called once per frame
+        void Update()
         {
-            _currentVal += _positive_rate;
+            _currentVal -= _negative_rate * Time.deltaTime;
+            if (_currentVal < 0)
+                _currentVal = 0;
             _scroller.value = _currentVal;
+
         }
 
+
+        public void Hit(InputAction.CallbackContext value)
+        {
+            if (value.phase == InputActionPhase.Started)
+            {
+                _currentVal += _positive_rate;
+                _scroller.value = _currentVal;
+
+                if (_currentVal >= 1)
+                {
+                    _cb_result();
+                    Destroy(gameObject);
+                }
+            }
+
+        }
+
+        public override void RunMinigame(MinigameCallBack cb_result, int difficultyFactor)
+        {
+            _cb_result = cb_result;
+        }
     }
 }
