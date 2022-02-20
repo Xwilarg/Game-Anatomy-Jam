@@ -313,6 +313,90 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: monster spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b73b4b914564d04185a79f3e8150e39
+      internalID: 432273885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 997c048881af16248937e15f6f733a20
+      internalID: -1412646565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7557eaca7c607ca469fbcdbbb4c6f2d8
+      internalID: 879935977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3283b8ad910aec4f8efd2782d4a757e
+      internalID: -1139393544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -329,9 +413,13 @@ TextureImporter:
       monster spritesheet_1: 586843073
       monster spritesheet_2: 585505076
       monster spritesheet_7: -1872571246
+      monster spritesheet_13: -1139393544
       monster spritesheet_9: -1595982783
       monster spritesheet_5: 58908065
+      monster spritesheet_11: -1412646565
       monster spritesheet_6: -329280461
+      monster spritesheet_12: 879935977
+      monster spritesheet_10: 432273885
       monster spritesheet_8: -50150623
       monster spritesheet_3: -1948791379
   spritePackingTag: 
