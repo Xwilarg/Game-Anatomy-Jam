@@ -8502,7 +8502,7 @@ GameObject:
   - component: {fileID: 1861224009}
   m_Layer: 0
   m_Name: r
-  m_TagString: Untagged
+  m_TagString: Lava
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
