@@ -43,15 +43,15 @@ public class Sewing : Minigame.AMiniGameManager
         }
         if (Time.time >= targetTime)
         {
-            //_cb();
-            //gameObject.SetActive(false);
+            _cb();
+            gameObject.SetActive(false);
         }
         textField.text = String.Format("{0:F2}",targetTime - Time.time);
     }
 
     public void Hit(InputAction.CallbackContext value)
     {
-        _mov = value.ReadValue<float>() * inputSpeed;
+        _mov = value.ReadValue<Vector2>().x * inputSpeed;
     }
 
     public override void RunMinigame(Minigame.MinigameCallBack cb_result, float difficultyFactor)
