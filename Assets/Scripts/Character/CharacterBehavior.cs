@@ -8,9 +8,10 @@ namespace AnatomyJam.Character
     {
         private int _maxHealth, _maxMana;
         private int _currentHealth, _currentMana;
+        private int _level;
 
         private UIDisplay _display;
-        private SO.CharacterInfo _info;
+        public SO.CharacterInfo _info;
 
         public float _timeBeforeAttack;
 
@@ -33,6 +34,7 @@ namespace AnatomyJam.Character
 
         public void Revive()
         {
+            _level = 1;
             _currentHealth = _maxHealth;
             _currentMana = _maxMana;
             _display.Init(_info);
@@ -97,6 +99,11 @@ namespace AnatomyJam.Character
         private void ResetTimerAttack()
         {
             _timeBeforeAttack = Random.Range(_info.AttackSpeed.Min, _info.AttackSpeed.Max);
+        }
+
+        public void AddLevel(int lv)
+        {
+            _level += lv;
         }
 
         public override string ToString() => $"{_info.Name} ({_info.Class}): {_currentHealth} / {_maxHealth} HP";

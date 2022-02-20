@@ -30,7 +30,7 @@ namespace AnatomyJam.Player
         private Vector3 _initPos;
 
         private Interactible _currentInteraction;
-        private SceneObject _inHands;
+        public SceneObject _inHands;
 
         private bool _canMove = true;
 

@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using UnityEngine;
+using System.Collections.Generic;
 
 namespace AnatomyJam.Character
 {
@@ -9,6 +10,8 @@ namespace AnatomyJam.Character
         public UIDisplay[] _displays;
 
         private CharacterBehavior[] _team;
+
+        private List<int> _characterStuff = new List<int>(4);
 
         private void Awake()
         {
@@ -63,6 +66,20 @@ namespace AnatomyJam.Character
                     character.Attack(character.TargetType == SO.TargetType.Enemy ? target : GetRandomCharacter());
                 }
             }
+        }
+
+        public void Rearm()
+        {
+            for (int i = 0; i < _characterStuff.Count; i++)
+            {
+                _team.First(x => x._info.Class == (AnatomyJam.SO.CharacterClass)i).AddLevel(_characterStuff[i]);
+                _characterStuff[i] = 0;
+            }
+        }
+
+        public void GiveItem(int level, AnatomyJam.SO.CharacterClass hero_ID)
+        {
+            _characterStuff[(int)hero_ID] += level;
         }
     }
 }
