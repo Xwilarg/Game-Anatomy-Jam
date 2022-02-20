@@ -93,6 +93,11 @@ namespace AnatomyJam.Player
         /// </summary>
         public void AddObjectInHands(ObjectInfo obj, float value, string text)
         {
+            if (_inHands != null)
+            {
+                return;
+            }
+
             var go = Instantiate(obj.GameObject, _handsContainer);
             go.transform.localPosition = Vector3.zero;
             go.transform.localScale
