@@ -54,6 +54,7 @@ namespace AnatomyJam.Manager
             if (_currentFight == _bossNode)
             {
                 _animWin.gameObject.SetActive(true);
+                StartCoroutine(WaitCoroutine(next));
                 _currentZone++;
                 InitCurrentZone();
             }
