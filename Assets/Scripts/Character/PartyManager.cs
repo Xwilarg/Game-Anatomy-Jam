@@ -11,8 +11,6 @@ namespace AnatomyJam.Character
 
         private CharacterBehavior[] _team;
 
-        private List<int> _characterStuff = new List<int>(4);
-
         private void Awake()
         {
             _team = _displays.Select(x => new CharacterBehavior(x, x.Info)).ToArray();
@@ -70,16 +68,15 @@ namespace AnatomyJam.Character
 
         public void Rearm()
         {
-            for (int i = 0; i < _characterStuff.Count; i++)
+            foreach (var character in _team)
             {
-                _team.First(x => x._info.Class == (AnatomyJam.SO.CharacterClass)i).AddLevel(_characterStuff[i]);
-                _characterStuff[i] = 0;
+                character.UpdateEquipement();
             }
         }
 
-        public void GiveItem(int level, AnatomyJam.SO.CharacterClass hero_ID)
+        public void GiveItem(int level, SO.CharacterClass hero_ID)
         {
-            _characterStuff[(int)hero_ID] += level;
+            _team.FirstOrDefault(x => x.Class == hero_ID).NextEquipement += level;
         }
     }
 }

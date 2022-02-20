@@ -612,9 +612,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 6fb408f932b2a22478af9d7f355f0c75, type: 2}
     - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
+      propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 425175864}
+      objectReference: {fileID: 1154407795}
+    - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
+      propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReceiveItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
+      propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AnatomyJam.Manager.GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
+      propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
+      propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
+      propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5604722565023797549, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1145,9 +1169,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 6fb408f932b2a22478af9d7f355f0c75, type: 2}
     - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
+      propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 425175864}
+      objectReference: {fileID: 1154407795}
+    - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
+      propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReceiveItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
+      propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AnatomyJam.Manager.GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
+      propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
+      propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
+      propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5604722565023797549, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1814,6 +1862,7 @@ MonoBehaviour:
   _handsContainer: {fileID: 1767215747}
   _pressE: {fileID: 479723569}
   _info: {fileID: 11400000, guid: e94d4adcc8d25c2419242b21d486bc3f, type: 2}
+  _inHands: {fileID: 0}
 --- !u!1 &453738630
 GameObject:
   m_ObjectHideFlags: 0
@@ -7035,9 +7084,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 6fb408f932b2a22478af9d7f355f0c75, type: 2}
     - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
+      propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 425175864}
+      objectReference: {fileID: 1154407795}
+    - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
+      propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReceiveItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
+      propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AnatomyJam.Manager.GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
+      propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
+      propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
+      propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5604722565023797549, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -8477,9 +8550,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 6fb408f932b2a22478af9d7f355f0c75, type: 2}
     - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
+      propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 425175864}
+      objectReference: {fileID: 1154407795}
+    - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
+      propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReceiveItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
+      propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AnatomyJam.Manager.GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
+      propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2521965866792381742, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
+      propertyPath: _onAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5604722565023797549, guid: f04c319942cfa844aae7bb14941b12ff, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

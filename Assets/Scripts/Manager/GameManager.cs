@@ -78,8 +78,8 @@ namespace AnatomyJam.Manager
                                 {
                                     _progress.InitCurrentZone(); // Reset progression
                                     _displayEnemy.Toggle(false);
-                                    _party.Revive();
                                     _party.Rearm();
+                                    _party.Revive();
                                     MapScroller.S.ResetAll(_progress.CurrentZone);
                                 },
                                 () =>
@@ -98,10 +98,11 @@ namespace AnatomyJam.Manager
                 }
             }
         }
-        public void ReceiveItem(AnatomyJam.SO.CharacterClass heroID)
+
+        public void ReceiveItem(int heroID)
         {
             SceneObjects.SceneObject SO = PlayerController.S._inHands;
-            _party.GiveItem(1, heroID);
+            _party.GiveItem(1, (SO.CharacterClass)heroID);
         }
     }
 }
