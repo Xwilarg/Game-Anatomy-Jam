@@ -42,6 +42,13 @@ namespace AnatomyJam.Manager
             StartCoroutine(LaunchRetreat(_onReset, _onDone));
         }
 
+        public IEnumerator DisplayFade(Action next)
+        {
+            _blackFade.LaunchFade(_info.FadeTimeBackground, true);
+            yield return new WaitForSeconds(_info.FadeTimeBackground);
+            next?.Invoke();
+        }
+
         private IEnumerator LaunchRetreat(Action _onReset, Action _onDone)
         {
             if (UnityEngine.Random.Range(0, 100) > _currentRetreatChances)
