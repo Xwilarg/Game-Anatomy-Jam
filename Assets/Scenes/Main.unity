@@ -2118,6 +2118,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: sharpening wheel
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fd3ece210d7bda94cbefe3173060d63f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2014929483568718161, guid: fd3ece210d7bda94cbefe3173060d63f, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -4690,6 +4694,8 @@ MonoBehaviour:
   _anim1: {fileID: 22100000, guid: b9493e2d1c61557469bd058f933c9a8d, type: 2}
   _anim2: {fileID: 22100000, guid: 199563bbdff3e314bba0a0e140d7d7f4, type: 2}
   _anim3: {fileID: 0}
+  _village2Unlock: {fileID: 550398337}
+  _village3Unlock: {fileID: 0}
 --- !u!1 &1181511625
 GameObject:
   m_ObjectHideFlags: 0
