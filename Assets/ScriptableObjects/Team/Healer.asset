@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b43b76678dfd94d41b66b2c318160733, type: 3}
   m_Name: Healer
   m_EditorClassIdentifier: 
-  Name: Healer
+  Name: Saint
   BaseHealth: 80
   BaseMana: 150
   BaseArmor: 10
