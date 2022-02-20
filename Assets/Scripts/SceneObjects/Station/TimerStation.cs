@@ -10,12 +10,13 @@ namespace AnatomyJam.SceneObjects.Station
         [SerializeField]
         private ProgressBar _progress;
 
+        [SerializeField]
+        private float _maxTimer = 3f;
+
         private float _timer = -1f;
 
         private SceneObject _obj;
         private PlayerController _pc;
-
-        private const float _maxTimer = 3f;
 
         public bool IsTimerActive => _timer > 0f;
 

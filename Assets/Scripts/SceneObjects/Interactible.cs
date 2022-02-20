@@ -17,7 +17,11 @@ namespace AnatomyJam.SceneObjects
         {
             if (_associatedStation == null)
             {
-                return true;
+                return obj == null;
+            }
+            if (obj == null)
+            {
+                return false;
             }
             if (_associatedStation is TimerStation timer)
             {
