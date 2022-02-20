@@ -54,6 +54,7 @@ namespace AnatomyJam.Character
             {
                 _backgroundBaseColor = _background.color;
             }
+            
         }
 
         public void UpdateSprite(Sprite s)
