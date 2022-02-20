@@ -9,6 +9,7 @@ namespace AnatomyJam.SO
         [Tooltip("Name of the character")]
         public string Name;
 
+        [Header("Stats")]
         [Tooltip("Health of the character")]
         public int BaseHealth;
         [Tooltip("Mana of the character, used for special attacks")]

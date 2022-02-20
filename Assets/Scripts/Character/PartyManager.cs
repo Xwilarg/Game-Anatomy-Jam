@@ -35,7 +35,7 @@ namespace AnatomyJam.Character
         {
             foreach (var character in _team)
             {
-                character.SetAnimationState("is walking", value);
+                character.ToggleWalkAnimation(value);
             }
         }
 
