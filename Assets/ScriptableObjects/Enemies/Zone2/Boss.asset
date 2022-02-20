@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Nara
   BaseHealth: 1200
   BaseMana: 1200
-  BaseArmor: 75
+  BaseArmor: 35
   BaseAttack:
     Min: 80
     Max: 100
