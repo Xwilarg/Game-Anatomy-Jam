@@ -141,7 +141,7 @@ namespace AnatomyJam.Player
         private void OnTriggerEnter(Collider other)
         {
             var otherC = other.GetComponent<Interactible>();
-            if (otherC != null && otherC.IsValid(_inHands))
+            if (otherC != null && _inHands == null && otherC.IsValid(_inHands))
             {
                 _currentInteraction = otherC;
                 _pressE.SetActive(true);

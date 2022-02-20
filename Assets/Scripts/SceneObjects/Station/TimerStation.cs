@@ -1,6 +1,5 @@
 ﻿using AnatomyJam.Character;
 using AnatomyJam.Player;
-using System.Linq;
 using UnityEngine;
 
 
@@ -17,6 +16,8 @@ namespace AnatomyJam.SceneObjects.Station
         private PlayerController _pc;
 
         private const float _maxTimer = 3f;
+
+        public bool IsTimerActive => _timer > 0f;
 
         public override void Deposit(PlayerController pc, SceneObject obj)
         {

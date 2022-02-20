@@ -1,6 +1,4 @@
-﻿using AnatomyJam.Material;
-using AnatomyJam.SceneObjects.Station;
-using AnatomyJam.SO;
+﻿using AnatomyJam.SceneObjects.Station;
 using System;
 using UnityEngine;
 using UnityEngine.Events;
@@ -16,7 +14,20 @@ namespace AnatomyJam.SceneObjects
         private AStation _associatedStation;
 
         public bool IsValid(SceneObject obj)
-            => _associatedStation == null || (obj != null && _associatedStation.GetRecipe(obj));
+        {
+            if (_associatedStation == null)
+            {
+                return true;
+            }
+            if (_associatedStation is TimerStation timer)
+            {
+                if (timer.IsTimerActive)
+                {
+                    return false;
+                }
+            }
+            return obj != null && _associatedStation.GetRecipe(obj);
+        }
 
         public void AddListener(Action callback)
         {
