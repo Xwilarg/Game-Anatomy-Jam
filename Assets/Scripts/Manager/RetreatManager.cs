@@ -44,13 +44,16 @@ namespace AnatomyJam.Manager
 
         private IEnumerator LaunchRetreat(Action _onReset, Action _onDone)
         {
-            _startChanceNb = _currentRetreatChances;
-            _currentRetreatChances -= _info.RetreatChanceMinus;
-
-            if (UnityEngine.Random.Range(0, 100) < _currentRetreatChances)
+            if (UnityEngine.Random.Range(0, 100) > _currentRetreatChances)
             {
+                _blackFade.LaunchFade(_info.FadeTimeBackground, true);
+                yield return new WaitForSeconds(_info.FadeTimeBackground);
+
                 SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
             }
+
+            _startChanceNb = _currentRetreatChances;
+            _currentRetreatChances -= _info.RetreatChanceMinus;
 
             _blackFade.LaunchFade(_info.FadeTimeBackground, true);
             yield return new WaitForSeconds(_info.FadeTimeBackground);
