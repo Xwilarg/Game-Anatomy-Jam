@@ -28,6 +28,9 @@ namespace AnatomyJam.Manager
         [SerializeField]
         private SO.AnimationInfo _animInfo;
 
+        [SerializeField]
+        private AnimatorOverrideController[] _animOverride;
+
         private int _currentZone;
         private int _currentFight;
 
@@ -58,6 +61,7 @@ namespace AnatomyJam.Manager
             if (_currentFight == _bossNode)
             {
                 _animWin.gameObject.SetActive(true);
+                _animWin.runtimeAnimatorController = _animOverride[_currentZone];
 
                 if (_currentZone == 0)
                 {

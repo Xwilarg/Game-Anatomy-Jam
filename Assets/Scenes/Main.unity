@@ -4874,6 +4874,10 @@ MonoBehaviour:
   _village2Unlock: {fileID: 550398337}
   _village3Unlock: {fileID: 523664098}
   _animInfo: {fileID: 11400000, guid: 36b452988b785a742acd266c38613a8f, type: 2}
+  _animOverride:
+  - {fileID: 22100000, guid: b9493e2d1c61557469bd058f933c9a8d, type: 2}
+  - {fileID: 22100000, guid: 5c4e57dadca323b47adc2f4ebb0f61cb, type: 2}
+  - {fileID: 22100000, guid: 2277cf16dde9e9c4cbcbaa8d11910e02, type: 2}
 --- !u!1 &1181511625
 GameObject:
   m_ObjectHideFlags: 0
