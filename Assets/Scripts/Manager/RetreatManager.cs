@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace AnatomyJam.Manager
 {
@@ -48,7 +49,7 @@ namespace AnatomyJam.Manager
 
             if (UnityEngine.Random.Range(0, 100) < _currentRetreatChances)
             {
-                // TODO: Gameover
+                SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
             }
 
             _blackFade.LaunchFade(_info.FadeTimeBackground, true);
