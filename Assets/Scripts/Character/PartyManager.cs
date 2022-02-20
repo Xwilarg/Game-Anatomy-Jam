@@ -60,7 +60,7 @@ namespace AnatomyJam.Character
                     continue;
                 }
 
-                character.PassTime(deltaTime);
+                character.PassTime(deltaTime, 1.5f);
                 if (character.CanAttack)
                 {
                     character.Attack(character.TargetType == SO.TargetType.Enemy ? target : GetRandomCharacter());

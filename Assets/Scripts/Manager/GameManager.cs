@@ -63,7 +63,7 @@ namespace AnatomyJam.Manager
                 _party.UpdateTimers(_currentEnemy, Time.deltaTime);
                 if (_currentEnemy.IsAlive)
                 {
-                    _currentEnemy.PassTime(Time.deltaTime);
+                    _currentEnemy.PassTime(Time.deltaTime, 1.5f);
                     if (_currentEnemy.CanAttack)
                     {
                         _currentEnemy.Attack(_party.GetRandomCharacter());
