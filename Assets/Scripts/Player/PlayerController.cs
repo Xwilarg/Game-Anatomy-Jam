@@ -1,6 +1,8 @@
+using AnatomyJam.Material;
 using AnatomyJam.SceneObjects;
 using AnatomyJam.SceneObjects.Station;
 using AnatomyJam.SO;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,11 +10,21 @@ namespace AnatomyJam.Player
 {
     public class PlayerController : MonoBehaviour
     {
+        public static PlayerController S;
+
+        private void Awake()
+        {
+            S = this;
+        }
+
         [SerializeField]
         private Transform _handsContainer;
 
         [SerializeField]
         private GameObject _pressE;
+
+        [SerializeField]
+        private PlayerInfo _info;
 
         private Rigidbody _rb;
         private Vector2 _mov;
@@ -54,6 +66,7 @@ namespace AnatomyJam.Player
             if (_mov != Vector2.zero)
             {
                 transform.rotation = Quaternion.LookRotation(new(_mov.x, 0f, _mov.y));
+                transform.Rotate(0f, -90f, 0f);
             }
         }
 
@@ -72,18 +85,38 @@ namespace AnatomyJam.Player
             _pressE.SetActive(false);
         }
 
+        public void AddObjectFromChest(ObjectInfo obj)
+            => AddObjectInHands(obj, -1f, null);
+
         /// <summary>
         /// Object taken from chest
         /// </summary>
-        public void AddObjectInHands(ObjectInfo obj)
+        public void AddObjectInHands(ObjectInfo obj, float value, string text)
         {
+            if (_inHands != null)
+            {
+                return;
+            }
+
             var go = Instantiate(obj.GameObject, _handsContainer);
             go.transform.localPosition = Vector3.zero;
+            go.transform.localScale
+                = new Vector3(
+                    obj.GameObject.transform.localScale.x * (1f / transform.localScale.x),
+                    obj.GameObject.transform.localScale.y * (1f / transform.localScale.y),
+                    obj.GameObject.transform.localScale.z * (1f / transform.localScale.z)
+                    );
+
+            if (text != null)
+            {
+                go.GetComponent<Armor>().Value = value;
+                go.GetComponentInChildren<TMP_Text>().text = text;
+            }
 
             _inHands = go.GetComponent<SceneObject>();
             _inHands.Init(obj, go);
 
-            foreach (var coll in go.GetComponents<Collider>())
+            foreach (var coll in go.GetComponentsInChildren<Collider>())
             {
                 coll.enabled = false;
             }
@@ -100,15 +133,15 @@ namespace AnatomyJam.Player
             {
                 ResetInteraction();
 
-                _inHands.DestroyObject();
                 station.Deposit(this, _inHands);
+                _inHands.DestroyObject();
                 _inHands = null;
             }
         }
 
         public void OnMovement(InputAction.CallbackContext value)
         {
-            _mov = value.ReadValue<Vector2>().normalized;
+            _mov = value.ReadValue<Vector2>().normalized * _info.BaseSpeed;
         }
 
         public void OnInterract(InputAction.CallbackContext value)

@@ -1,6 +1,5 @@
 ﻿using AnatomyJam.Character;
 using AnatomyJam.Player;
-using System.Linq;
 using UnityEngine;
 
 
@@ -11,12 +10,17 @@ namespace AnatomyJam.SceneObjects.Station
         [SerializeField]
         private ProgressBar _progress;
 
+        [SerializeField]
+        private float _maxTimer = 3f;
+
+        private AudioSource _source;
+
         private float _timer = -1f;
 
         private SceneObject _obj;
         private PlayerController _pc;
 
-        private const float _maxTimer = 3f;
+        public bool IsTimerActive => _timer > 0f;
 
         public override void Deposit(PlayerController pc, SceneObject obj)
         {
@@ -24,6 +28,12 @@ namespace AnatomyJam.SceneObjects.Station
             _obj = obj;
             _timer = _maxTimer;
             _progress.gameObject.SetActive(true);
+            _source.Play();
+        }
+
+        private void Start()
+        {
+            _source = GetComponent<AudioSource>();
         }
 
         private void Update()
@@ -35,7 +45,8 @@ namespace AnatomyJam.SceneObjects.Station
                 {
                     _timer = 0f;
                     var result = GetRecipe(_obj);
-                    ThrowOnFloor(_pc, _obj, result);
+                    _source.Stop();
+                    ThrowOnFloor(_pc, _obj, result, 0f, null);
                     _progress.gameObject.SetActive(false);
                 }
                 else

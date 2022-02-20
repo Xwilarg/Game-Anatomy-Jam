@@ -1,5 +1,6 @@
 using AnatomyJam.Character;
 using AnatomyJam.Map;
+using AnatomyJam.Player;
 using System.Collections;
 using UnityEngine;
 
@@ -27,6 +28,7 @@ namespace AnatomyJam.Manager
         private void Start()
         {
             _progress = GetComponent<ProgressManager>();
+            MapScroller.S.ResetAll(_progress.CurrentZone);
             StartCoroutine(BeginRun());
         }
 
@@ -61,7 +63,7 @@ namespace AnatomyJam.Manager
                 _party.UpdateTimers(_currentEnemy, Time.deltaTime);
                 if (_currentEnemy.IsAlive)
                 {
-                    _currentEnemy.PassTime(Time.deltaTime);
+                    _currentEnemy.PassTime(Time.deltaTime, 1.5f);
                     if (_currentEnemy.CanAttack)
                     {
                         _currentEnemy.Attack(_party.GetRandomCharacter());
@@ -69,16 +71,33 @@ namespace AnatomyJam.Manager
                         // Is hero party still alive?
                         if (!_party.IsPartyAlive)
                         {
-                            // TODO: Go back to the base to take new weapons
                             _isFighting = false;
+                            PlayerController.S.CanMove = false;
+                            RetreatManager.S.DisplayRetreat(
+                                () =>
+                                {
+                                    _progress.InitCurrentZone(); // Reset progression
+                                    _displayEnemy.Toggle(false);
+                                    _party.Rearm();
+                                    _party.Revive();
+                                    MapScroller.S.ResetAll(_progress.CurrentZone);
+                                },
+                                () =>
+                                {
+                                    PlayerController.S.CanMove = true;
+                                    StartCoroutine(BeginRun());
+                                });
                         }
                     }
                 }
                 else
                 {
                     // Enemy was killed, let's fight the next one
-                    _progress.WinFight();
-                    StartCoroutine(BeginRun());
+                    _isFighting = false;
+                    _progress.WinFight(() =>
+                    {
+                        StartCoroutine(BeginRun());
+                    });
                 }
             }
         }

@@ -5,7 +5,7 @@ using System.Collections;
 
 namespace Minigame
 {
-    public class InputCursor : MonoBehaviour
+    public class InputCursor : AMiniGameManager
     {
         private RectTransform _rect;
 
@@ -18,13 +18,14 @@ namespace Minigame
         private GameObject _targetRect;
 
         [SerializeField]
+        private GameObject _movingRect;
+
+        [SerializeField]
         private int _targetHit = 5;
 
-        private void Start()
-        {
-            _rect = (RectTransform)transform;
-            _target = (RectTransform)_targetRect.transform;
-        }
+        private MinigameCallBack _cb_result;
+
+        private AudioSource _source;
 
         public int GetHits()
         {
@@ -33,17 +34,26 @@ namespace Minigame
 
         public void Hit(InputAction.CallbackContext value)
         {
+            if (!gameObject.activeSelf)
+                return;
+
             if (value.phase == InputActionPhase.Started && !_penalty)
             {
                 var targetXtLeft = _target.localPosition.x - (_target.sizeDelta.x / 2f);
                 var targetXtRight = _target.localPosition.x + (_target.sizeDelta.x / 2f);
+                if (_source == null)
+                {
+                    _source = GetComponent<AudioSource>();
+                }
+                _source.Play();
                 if (_rect.localPosition.x >= targetXtLeft && _rect.localPosition.x <= targetXtRight)
                 {
                     StartCoroutine(ChangeBackColor());
                     Hits++;
                     if (Hits >= _targetHit)
                     {
-                        Debug.Log("C'est gagné!");
+                        _cb_result();
+                        gameObject.SetActive(false);
                     }
                 }
                 else
@@ -71,6 +81,15 @@ namespace Minigame
 
             _targetRect.GetComponent<Image>().color = Color.white;
             _penalty = false;
+        }
+
+        public override void RunMinigame(MinigameCallBack cb_result, float difficultyFactor)
+        {
+            _rect = (RectTransform)_movingRect.transform;
+            _target = (RectTransform)_targetRect.transform;
+            _cb_result = cb_result;
+            Hits = 0;
+            base.RunMinigame(cb_result, difficultyFactor);
         }
     }
 }

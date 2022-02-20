@@ -21,3 +21,12 @@ MonoBehaviour:
   NbOfEnemiesBeforeBoss:
     Min: 3
     Max: 5
+  _spriteGrass:
+  - {fileID: -994404007, guid: 8263441027a6b8b4999c1ec9e108b12e, type: 3}
+  _spritePath:
+  - {fileID: 898846932, guid: 8263441027a6b8b4999c1ec9e108b12e, type: 3}
+  - {fileID: 1420167103, guid: 8263441027a6b8b4999c1ec9e108b12e, type: 3}
+  _spritePathLeft:
+  - {fileID: 138563353, guid: 8263441027a6b8b4999c1ec9e108b12e, type: 3}
+  _spritePathRight:
+  - {fileID: 1857107061, guid: 8263441027a6b8b4999c1ec9e108b12e, type: 3}

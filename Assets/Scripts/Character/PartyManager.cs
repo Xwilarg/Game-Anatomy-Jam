@@ -5,6 +5,8 @@ namespace AnatomyJam.Character
 {
     public class PartyManager : MonoBehaviour
     {
+        public static PartyManager S;
+
         [SerializeField]
         public UIDisplay[] _displays;
 
@@ -12,6 +14,7 @@ namespace AnatomyJam.Character
 
         private void Awake()
         {
+            S = this;
             _team = _displays.Select(x => new CharacterBehavior(x, x.Info)).ToArray();
         }
 
@@ -21,6 +24,14 @@ namespace AnatomyJam.Character
         {
             var stillAlive = _team.Where(x => x.IsAlive).ToArray();
             return stillAlive[Random.Range(0, stillAlive.Length)];
+        }
+
+        public void Revive()
+        {
+            foreach (var character in _team)
+            {
+                character.Revive();
+            }
         }
 
         public void ReadyForFight()
@@ -49,12 +60,25 @@ namespace AnatomyJam.Character
                     continue;
                 }
 
-                character.PassTime(deltaTime);
+                character.PassTime(deltaTime, 1.5f);
                 if (character.CanAttack)
                 {
                     character.Attack(character.TargetType == SO.TargetType.Enemy ? target : GetRandomCharacter());
                 }
             }
+        }
+
+        public void Rearm()
+        {
+            foreach (var character in _team)
+            {
+                character.UpdateEquipement();
+            }
+        }
+
+        public void GiveItem(float level, SO.CharacterClass hero_ID)
+        {
+            _team.FirstOrDefault(x => x.Class == hero_ID).NextEquipement += level;
         }
     }
 }
