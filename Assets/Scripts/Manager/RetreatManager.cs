@@ -1,18 +1,45 @@
+using AnatomyJam.SO;
 using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
-public class RetreatManager : MonoBehaviour
+namespace AnatomyJam.Manager
 {
-    // Start is called before the first frame update
-    void Start()
+    public class RetreatManager : MonoBehaviour
     {
-        
-    }
+        [SerializeField]
+        private RetreatInfo _info;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        [SerializeField]
+        private FadeImage _blackFade;
+
+        [SerializeField]
+        private FadeText _mainText, _subText;
+
+        [SerializeField]
+        private TMP_Text _percentText;
+
+
+        private void Start()
+        {
+            //StartCoroutine(LaunchRetreat());
+        }
+
+        private IEnumerator LaunchRetreat()
+        {
+            _mainText.ResetColor();
+            _subText.ResetColor();
+
+            _blackFade.LaunchFade(_info.FadeTimeBackground, true);
+            yield return new WaitForSeconds(_info.FadeTimeBackground);
+
+            _mainText.LaunchFade(_info.FadeTimeBackground, true);
+            yield return new WaitForSeconds(_info.FadeTimeText);
+            _mainText.LaunchFade(_info.FadeTimeBackground, true);
+            yield return new WaitForSeconds(_info.FadeTimeText);
+
+            _blackFade.LaunchFade(_info.FadeTimeBackground, false);
+            yield return new WaitForSeconds(_info.FadeTimeBackground);
+        }
     }
 }
