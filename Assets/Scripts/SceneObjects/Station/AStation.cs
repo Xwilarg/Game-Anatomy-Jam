@@ -46,7 +46,7 @@ namespace AnatomyJam.SceneObjects.Station
                 instance.Metal = obj.Metal;
                 instance.ResourceType = obj.Resource;
                 instance.Name = result.Output.Name;
-                pc.AddObjectInHands(instance);
+                pc.AddObjectInHands(instance, newArmValue, newText);
             });
         }
 

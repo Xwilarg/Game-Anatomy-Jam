@@ -1,6 +1,8 @@
+using AnatomyJam.Material;
 using AnatomyJam.SceneObjects;
 using AnatomyJam.SceneObjects.Station;
 using AnatomyJam.SO;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -82,10 +84,13 @@ namespace AnatomyJam.Player
             _pressE.SetActive(false);
         }
 
+        public void AddObjectFromChest(ObjectInfo obj)
+            => AddObjectInHands(obj, -1f, null);
+
         /// <summary>
         /// Object taken from chest
         /// </summary>
-        public void AddObjectInHands(ObjectInfo obj)
+        public void AddObjectInHands(ObjectInfo obj, float value, string text)
         {
             var go = Instantiate(obj.GameObject, _handsContainer);
             go.transform.localPosition = Vector3.zero;
@@ -95,6 +100,12 @@ namespace AnatomyJam.Player
                     obj.GameObject.transform.localScale.y * (1f / transform.localScale.y),
                     obj.GameObject.transform.localScale.z * (1f / transform.localScale.z)
                     );
+
+            if (text != null)
+            {
+                go.GetComponent<Armor>().Value = value;
+                go.GetComponentInChildren<TMP_Text>().text = text;
+            }
 
             _inHands = go.GetComponent<SceneObject>();
             _inHands.Init(obj, go);

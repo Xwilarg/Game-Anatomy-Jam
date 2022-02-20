@@ -52,7 +52,6 @@ namespace AnatomyJam.SceneObjects.Station
             }
 
             minigameBG.SetActive(true);
-           // minigame.SetActive(true);
             Minigame.MinigameCallBack cb = () =>
             {
                 minigameBG.SetActive(false);
