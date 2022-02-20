@@ -15,12 +15,13 @@ MonoBehaviour:
   Name: Mage
   BaseHealth: 60
   BaseMana: 250
-  BaseArmor: 0
+  BaseArmor: 5
   BaseAttack:
-    Min: 25
+    Min: 30
     Max: 45
   AttackSpeed:
     Min: 4
     Max: 6
   Class: 3
   TargetType: 1
+  EnemySprite: {fileID: 0}
