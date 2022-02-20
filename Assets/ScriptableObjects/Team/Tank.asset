@@ -15,12 +15,13 @@ MonoBehaviour:
   Name: Tank
   BaseHealth: 150
   BaseMana: 50
-  BaseArmor: 30
+  BaseArmor: 25
   BaseAttack:
-    Min: 10
-    Max: 15
+    Min: 5
+    Max: 10
   AttackSpeed:
     Min: 1.5
     Max: 2
   Class: 1
   TargetType: 1
+  EnemySprite: {fileID: 0}

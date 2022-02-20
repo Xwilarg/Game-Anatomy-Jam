@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Healer
   BaseHealth: 80
   BaseMana: 150
-  BaseArmor: 5
+  BaseArmor: 10
   BaseAttack:
     Min: 20
     Max: 30
@@ -24,3 +24,4 @@ MonoBehaviour:
     Max: 5
   Class: 2
   TargetType: 0
+  EnemySprite: {fileID: 0}

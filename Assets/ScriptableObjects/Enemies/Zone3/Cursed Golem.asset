@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b43b76678dfd94d41b66b2c318160733, type: 3}
-  m_Name: Mage
+  m_Name: Cursed Golem
   m_EditorClassIdentifier: 
-  Name: Mage
-  BaseHealth: 60
-  BaseMana: 250
-  BaseArmor: 5
+  Name: Cursed Golem
+  BaseHealth: 300
+  BaseMana: 200
+  BaseArmor: 35
   BaseAttack:
-    Min: 30
-    Max: 45
+    Min: 40
+    Max: 75
   AttackSpeed:
-    Min: 4
-    Max: 6
-  Class: 3
+    Min: 1.5
+    Max: 2
+  Class: 5
   TargetType: 1
-  EnemySprite: {fileID: 0}
+  EnemySprite: {fileID: -107406710, guid: d434126682f62b34490f6ac058ffb5c2, type: 3}
