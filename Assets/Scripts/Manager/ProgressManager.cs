@@ -76,7 +76,10 @@ namespace AnatomyJam.Manager
                 {
                     next = () =>
                     {
-                        SceneManager.LoadScene("Victory");
+                        StartCoroutine(RetreatManager.S.DisplayFade(() =>
+                        {
+                            SceneManager.LoadScene("Victory");
+                        }));
                     };
                 }
 
