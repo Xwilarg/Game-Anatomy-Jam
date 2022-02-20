@@ -2,6 +2,7 @@
 using AnatomyJam.SO;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace AnatomyJam.Manager
 {
@@ -66,10 +67,22 @@ namespace AnatomyJam.Manager
                 {
                     _village3Unlock.SetActive(true);
                 }
+
+                if (_currentZone == 2)
+                {
+                    next = () =>
+                    {
+                        SceneManager.LoadScene("Victory");
+                    };
+                }
+
                 StartCoroutine(WaitAnimEnd(next, _currentZone));
                 _currentZone++;
 
-                InitCurrentZone();
+                if (_currentZone < 3)
+                {
+                    InitCurrentZone();
+                }
             }
             else
             {
