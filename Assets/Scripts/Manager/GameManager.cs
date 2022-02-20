@@ -93,6 +93,7 @@ namespace AnatomyJam.Manager
                 else
                 {
                     // Enemy was killed, let's fight the next one
+                    _isFighting = false;
                     _progress.WinFight(() =>
                     {
                         StartCoroutine(BeginRun());

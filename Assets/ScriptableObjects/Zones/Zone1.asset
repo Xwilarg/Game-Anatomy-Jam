@@ -19,8 +19,8 @@ MonoBehaviour:
   Boss: {fileID: 11400000, guid: f5c4457a992c85947a2b5a8618c1d805, type: 2}
   UnlockedResources: 
   NbOfEnemiesBeforeBoss:
-    Min: 3
-    Max: 5
+    Min: 0
+    Max: 0
   _spriteGrass:
   - {fileID: -994404007, guid: 8263441027a6b8b4999c1ec9e108b12e, type: 3}
   _spritePath:
